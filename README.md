@@ -12,7 +12,7 @@
 
 </div>
 
-Sell-side analysts turn company guidance, filings, and industry research into earnings estimates that investors use as a baseline. Streetbench tests whether those agents can produce **a closer EPS estimate** than the Street consensus. An agent can also show its sources and assumptions, giving investors an analyst-style baseline they can question, change, and work through themselves.
+Sell-side analysts turn company guidance, filings, and industry research into earnings estimates that investors use as a baseline. **Streetbench tests whether those agents can produce **a closer EPS estimate** than the Street consensus**. An agent can also show its sources and assumptions, giving investors an analyst-style baseline they can question, change, and work through themselves.
 
 ## Results
 

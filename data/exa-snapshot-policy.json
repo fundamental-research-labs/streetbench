@@ -1,0 +1,39 @@
+{
+  "policy_id": "streetbench-exa-snapshot-v1",
+  "provider": "Exa Snapshot",
+  "provider_documentation": "https://exa.ai/docs/search/snapshot",
+  "source_contract_version": "exa-snapshot-v2",
+  "case_count": 200,
+  "cutoff_field": "data/cases.jsonl:cutoff_iso",
+  "cutoff_instruction": "Use each case's exact timezone-aware timestamp. Do not recalculate it.",
+  "search": {
+    "endpoint": "POST https://api.exa.ai/search",
+    "type": "auto",
+    "numResults": 5,
+    "contents": {
+      "snapshotAsOf": "<case cutoff_iso>",
+      "text": true
+    },
+    "note": "Use the exact case cutoff on both search and returned content."
+  },
+  "contents": {
+    "endpoint": "POST https://api.exa.ai/contents",
+    "ids": [
+      "<one HTTP(S) URL>"
+    ],
+    "snapshotAsOf": "<same case cutoff_iso>",
+    "text": true
+  },
+  "admission": {
+    "no_live_web_fallback": true,
+    "reject_returned_publication_date_after_cutoff": true,
+    "exclude_attempts_that_saw_target_results_headlines_or_reported_values": true,
+    "historical_search_ranking_guaranteed": false,
+    "provider_capture_timestamp_exposed": false
+  },
+  "not_released": [
+    "credentials or account identity",
+    "historical numeric financial inputs",
+    "archived page bodies and raw trajectories"
+  ]
+}

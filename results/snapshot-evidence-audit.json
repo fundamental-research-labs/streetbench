@@ -1,0 +1,22 @@
+{
+  "scope": "200 selected Shortcut Astra attempts",
+  "audit_type": "Exa Snapshot provenance metadata",
+  "selected_cases": 200,
+  "all_provenance_records": 14518,
+  "content_provenance_records": 14420,
+  "records_with_exact_case_cutoff": 14420,
+  "records_with_provider_publication_date": 5209,
+  "records_published_after_cutoff": 0,
+  "records_without_provider_publication_date": 9211,
+  "no_eligible_snapshot_state_records": 98,
+  "selected_final_writeups_screened": 200,
+  "cited_source_links_screened": 1881,
+  "cited_source_urls_with_embedded_2026_date": 205,
+  "cited_source_urls_dated_after_cutoff": 0,
+  "writeups_flagged_for_target_actual_wording": 7,
+  "flagged_writeups_reviewed": 7,
+  "same_company_q2_results_wording_urls_flagged": 15,
+  "flagged_url_titles_and_openings_reviewed": 15,
+  "flagged_review_result": "The seven writeups denied seeing actual target results. The fifteen source pages were earnings-date announcements or pre-release previews.",
+  "limit": "This targeted review does not independently date pages with missing publication metadata or replace an LLM reading of every retrieved page or trajectory. It covers selected Shortcut Astra artifacts, not all nine configurations."
+}

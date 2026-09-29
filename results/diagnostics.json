@@ -1,0 +1,181 @@
+{
+  "status": "exploratory_retrospective",
+  "cohort_cases": 200,
+  "answer_key_sha256": "f149755b23f40b4c5d3ceec1d43191f55632b17c46ea115f31cf12c27706fd55",
+  "win_loss_definition": "Compare each selected forecast absolute EPS error with final Street consensus absolute EPS error on the same case. Differences within 1e-12 count as ties.",
+  "rows": [
+    {
+      "harness": "Shortcut",
+      "model": "Luna",
+      "cases": 200,
+      "closer_than_street": 113,
+      "same_absolute_error": 9,
+      "farther_than_street": 78,
+      "mean_absolute_error": 0.13155828827486274
+    },
+    {
+      "harness": "Shortcut",
+      "model": "Sol",
+      "cases": 200,
+      "closer_than_street": 120,
+      "same_absolute_error": 3,
+      "farther_than_street": 77,
+      "mean_absolute_error": 0.12741459758976553
+    },
+    {
+      "harness": "Shortcut",
+      "model": "Astra",
+      "cases": 200,
+      "closer_than_street": 121,
+      "same_absolute_error": 0,
+      "farther_than_street": 79,
+      "mean_absolute_error": 0.12034044439956919
+    },
+    {
+      "harness": "Codex",
+      "model": "Luna",
+      "cases": 200,
+      "closer_than_street": 100,
+      "same_absolute_error": 28,
+      "farther_than_street": 72,
+      "mean_absolute_error": 0.13216
+    },
+    {
+      "harness": "Codex",
+      "model": "Sol",
+      "cases": 200,
+      "closer_than_street": 104,
+      "same_absolute_error": 26,
+      "farther_than_street": 70,
+      "mean_absolute_error": 0.12583
+    },
+    {
+      "harness": "Codex",
+      "model": "Astra",
+      "cases": 200,
+      "closer_than_street": 101,
+      "same_absolute_error": 32,
+      "farther_than_street": 67,
+      "mean_absolute_error": 0.129015
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "model": "Luna",
+      "cases": 200,
+      "closer_than_street": 84,
+      "same_absolute_error": 31,
+      "farther_than_street": 85,
+      "mean_absolute_error": 0.14134
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "model": "Sol",
+      "cases": 200,
+      "closer_than_street": 109,
+      "same_absolute_error": 23,
+      "farther_than_street": 68,
+      "mean_absolute_error": 0.12705
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "model": "Astra",
+      "cases": 200,
+      "closer_than_street": 108,
+      "same_absolute_error": 26,
+      "farther_than_street": 66,
+      "mean_absolute_error": 0.127125
+    }
+  ],
+  "within_harness_model_comparisons": [
+    {
+      "harness": "Shortcut",
+      "from_model": "Luna",
+      "to_model": "Sol",
+      "mean_error_reduction_per_share": 0.004143690685097198,
+      "cases_second_closer": 116,
+      "cases_first_closer": 83,
+      "cases_same_absolute_error": 1
+    },
+    {
+      "harness": "Shortcut",
+      "from_model": "Sol",
+      "to_model": "Astra",
+      "mean_error_reduction_per_share": 0.0070741531901963505,
+      "cases_second_closer": 109,
+      "cases_first_closer": 91,
+      "cases_same_absolute_error": 0
+    },
+    {
+      "harness": "Shortcut",
+      "from_model": "Luna",
+      "to_model": "Astra",
+      "mean_error_reduction_per_share": 0.01121784387529355,
+      "cases_second_closer": 126,
+      "cases_first_closer": 74,
+      "cases_same_absolute_error": 0
+    },
+    {
+      "harness": "Codex",
+      "from_model": "Luna",
+      "to_model": "Sol",
+      "mean_error_reduction_per_share": 0.006330000000000003,
+      "cases_second_closer": 87,
+      "cases_first_closer": 59,
+      "cases_same_absolute_error": 54
+    },
+    {
+      "harness": "Codex",
+      "from_model": "Sol",
+      "to_model": "Astra",
+      "mean_error_reduction_per_share": -0.0031849999999999947,
+      "cases_second_closer": 67,
+      "cases_first_closer": 77,
+      "cases_same_absolute_error": 56
+    },
+    {
+      "harness": "Codex",
+      "from_model": "Luna",
+      "to_model": "Astra",
+      "mean_error_reduction_per_share": 0.0031450000000000085,
+      "cases_second_closer": 79,
+      "cases_first_closer": 61,
+      "cases_same_absolute_error": 60
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "from_model": "Luna",
+      "to_model": "Sol",
+      "mean_error_reduction_per_share": 0.014289999999999999,
+      "cases_second_closer": 111,
+      "cases_first_closer": 52,
+      "cases_same_absolute_error": 37
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "from_model": "Sol",
+      "to_model": "Astra",
+      "mean_error_reduction_per_share": -7.499999999999857e-05,
+      "cases_second_closer": 81,
+      "cases_first_closer": 81,
+      "cases_same_absolute_error": 38
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "from_model": "Luna",
+      "to_model": "Astra",
+      "mean_error_reduction_per_share": 0.014215,
+      "cases_second_closer": 109,
+      "cases_first_closer": 67,
+      "cases_same_absolute_error": 24
+    }
+  ],
+  "shortcut_astra_final_writeup_citations": {
+    "cases": 200,
+    "total_citations": 1881,
+    "median_citations_per_case": 9.0,
+    "median_distinct_domains_per_case": 4.5,
+    "cases_citing_sec_gov": 198,
+    "cases_citing_other_domains": 199,
+    "basis": "URLs listed in selected final estimate artifacts. Citation presence does not verify the agent read the page or establish a causal effect on EPS accuracy."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "published_private_release_validated",
+  "frozen_manifest_cases": 200,
+  "boundary_tests_passed": 11,
+  "synthetic_consensus_smoke": "passed. 2 valid rows. zero paired gain",
+  "credentials_private_paths_secret_patterns": "no observed matches in curated text assets",
+  "graph_policy": "Nine-configuration MAE reduction bars and case-level closer/tie/farther counts. no uncertainty whiskers",
+  "operational_snapshots": "Selected forecasts cover the same 200 cases for all nine configurations. Exposed attempts remain in private run records.",
+  "same_answer_key_for_all_arms": true,
+  "release_manifest_verification": "passed",
+  "benchmark_landscape": "Five primary benchmark sources reviewed. see docs/BENCHMARK_LANDSCAPE.md",
+  "publication_status": "private_repository_published",
+  "scored_configurations": 9,
+  "cases_per_configuration": 200,
+  "valid_per_configuration": 200,
+  "challenge_case_count": 200,
+  "challenge_submission_validator": "exact IDs, one finite EPS forecast per case",
+  "challenge_scorer_smoke": "private key consensus-copy submission reproduces Street MAE 0.1467",
+  "data_release": "public case metadata and hashes. licensed numeric histories and answer rows withheld",
+  "snapshot_policy": "Exa Snapshot Search and Contents use each frozen cutoff. see data/exa-snapshot-policy.json",
+  "local_scoring": "200-row user-supplied normalized EPS CSV. final consensus optional",
+  "aggregate_diagnostics": "Nine rows checked against completed scores and frozen answer-key commitment. source-link counts describe final writeups only"
+}

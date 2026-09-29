@@ -1,0 +1,1609 @@
+{
+  "cohort_id": "retro-2026-junjul-200",
+  "status": "exploratory_replay; final_cap_iq_consensus_held_out",
+  "case_count": 200,
+  "source_manifest_sha256": "652df1329b90da7243806a2420509365b55d0cb2841c044f597e02a8f1c9ce4f",
+  "hash_encoding": "sha256 of json.dumps(original_manifest, sort_keys=True).encode()",
+  "cases": [
+    {
+      "case_id": "XNCR-2026-06-30",
+      "ticker": "XNCR",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "68a672247d66e7b27204087cb3a4337afcc1e796ab85dfee70c94fc0004e1000",
+      "history_sha256": "c31b928c45b98a3ae7a85ddb20b775dfd6888d43d037cdf17b0fb113bb9c657c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NKTR-2026-06-30",
+      "ticker": "NKTR",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "09f0a39cb02c94d94fd0f1de9fff75bbd1e6c832950b6ca4ec39fd2af0cb35b4",
+      "history_sha256": "6fc6d6819ce92cbcac6c9bb99eccf905d545a9696bb43e713c05c132188318a3",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "LMAT-2026-06-30",
+      "ticker": "LMAT",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "e68d08d6174e85ec5e916cd1881eb449923f1b5dbdf9cbc6760cffb483789cbc",
+      "history_sha256": "e1052f4711fd83b23db06b40538f6e3bab48623f3c6531be82fcea27f9243a17",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SMA-2026-06-30",
+      "ticker": "SMA",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "c3e46f32d63ca068c4a63b6d46aff541d024af9d2e1fce8e1f9f3cc95dabc5e4",
+      "history_sha256": "b929bc9a558e8d896829fb3a74428440cd4cfc082ba4354a9f3596e2ec23787c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SPSC-2026-06-30",
+      "ticker": "SPSC",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "67d3300e2b498ffeb5321016175ca9c3097b967522d4c3940be2712f54117da6",
+      "history_sha256": "e68830530f2baf4ecf10f409178a02a692ddc4c5dac4919f97eef4adf3435fc8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "LBRX-2026-06-30",
+      "ticker": "LBRX",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "437fc518deaaab13acc6562fc8d33977630803524657729b0eaf1ee21b281077",
+      "history_sha256": "61714b7123b85423d54f847dafdce33e4ca3a0253930a6e6fe2eee24b776da40",
+      "undated_history_rows": 2
+    },
+    {
+      "case_id": "BIOA-2026-06-30",
+      "ticker": "BIOA",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "ea1ccbb0d5e64335d2a9b2cf8f430e40020d1b360fa8f1442156ef0f7c4c0a44",
+      "history_sha256": "262eda0a440df1f46c2ede686ffc3a57a70cfe3a4ac4fdd128af29a56cc3e93d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MLYS-2026-06-30",
+      "ticker": "MLYS",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "93ceb10881ba9604100b1796f327dbca3a4c0ca58a1d2e96604c6f60aa45d98e",
+      "history_sha256": "3a75a4accb3834ab149d0323e482277ce4647bac550a4ad0657f26b832012db7",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "OSBC-2026-06-30",
+      "ticker": "OSBC",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "ea5e059baf7a7f8f01c23e054710452da0b69507dfd26240340eec97b27ce74c",
+      "history_sha256": "d4436187c860b2b790c40bce70ee93be0ba6efb521e58e2d1b4196f730ac94cf",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FMNB-2026-06-30",
+      "ticker": "FMNB",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "06b6e272dfbf91d6090ed75795293bb7f89155ef02563dde6b3c99da24564207",
+      "history_sha256": "e3ab251ea02b2bd98658a937a401f0391cac9437570429d9cd67df9ad2715d17",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SEPN-2026-06-30",
+      "ticker": "SEPN",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "a1b3029e07b8c76471c16dc2a19cdfb1882602b1a71a390593833f3cdd790d53",
+      "history_sha256": "c84a1cefd5099fff49ea33b35ffdcd5ce96dcf8b680b0850c78fde7e7cb056eb",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SLRC-2026-06-30",
+      "ticker": "SLRC",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "88f721d943872392d5a39a5a76b90a30d0b8256c1077707de173cd43bef2e9e3",
+      "history_sha256": "4554e77b4ad28849ccccd0ec2ea937e7580cc85e2f4a16464ab3a95fca8829c2",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FSBC-2026-06-30",
+      "ticker": "FSBC",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "428a1c5e50e0fbd1331bc07bdfdd7bbc9d6833cc8cc69ed46b91919d1fecb51c",
+      "history_sha256": "9e12d2a0b546e3d3bc5ca8a215c179f5a43ea558e48d081f7bf324359c9234b5",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "KURA-2026-06-30",
+      "ticker": "KURA",
+      "cutoff": "2026-08-10T16:00:00-04:00",
+      "prompt_sha256": "4b1a9b13ffef6b5f842cb39ee658d73395746cf68443727d4ba5d70319ffe8c1",
+      "history_sha256": "a441096890d4c5ae8be0499f441ea85fe841376b76d42541106a773bbc51a184",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SAFE-2026-06-30",
+      "ticker": "SAFE",
+      "cutoff": "2026-07-29T16:00:00-04:00",
+      "prompt_sha256": "d6c75ef90bf8286f5d4f450d7ea8ae8ba8a126e7888970b6f9554b9e1824b992",
+      "history_sha256": "dabf51befbffab17e98cb4a360febdf7ea2be75ce6955e566b4b18166f28b969",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "RXRX-2026-06-30",
+      "ticker": "RXRX",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "6e9cab362f9872916dabc80085b5aaa0dc2ac5457977335c3079235ce09cf66b",
+      "history_sha256": "c534237f4e70dee11c0e4bb934124a4945c5f7cd4863e5b36ca76a6a535c7cd1",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SHAK-2026-06-30",
+      "ticker": "SHAK",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "f200edf1752fb96e6b16e8ac8493f321bc03ee8a069730aba3afeb6203887ed6",
+      "history_sha256": "79b280f5db55fb0cbc7fb1a41a57e073238b3b3b3fe1b49dc6afdec3cc76de6c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CABA-2026-06-30",
+      "ticker": "CABA",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "dac9b6df575e27b968fe4f2c34faee927c35d5265d1c07e383fd3a1afe91d16d",
+      "history_sha256": "ed59bd48f9b64e925fd00127cef0a97f920cf274168d3272f7d51fbed8d118f1",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "RBB-2026-06-30",
+      "ticker": "RBB",
+      "cutoff": "2026-07-16T16:00:00-04:00",
+      "prompt_sha256": "04c36b606e0e57d4b36494fd709d64f04d3b3ea7f9a6922353ab8c8fc0a5271c",
+      "history_sha256": "2d1ec693103e314152b12b4d81a90330f4a51a7cf648b5ecf1ae90504cada2cd",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "DRH-2026-06-30",
+      "ticker": "DRH",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "c7905f914de129c5580c3559d2b5ded61f47476aac9d953126ccac7844d6c904",
+      "history_sha256": "f569d7d49d974ba1b59f9f84e436283b3f368d0251aad528e31d3c2a3c2e2b87",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SYBT-2026-06-30",
+      "ticker": "SYBT",
+      "cutoff": "2026-07-27T16:00:00-04:00",
+      "prompt_sha256": "c9f599b200456f7235969ff74a3d6d7f931df1670fad21fc539f5715ed029df1",
+      "history_sha256": "b75ad6114dfc94ee19fb14c76f3403d60345c84b70d93ce25e50ea66e0b40cc0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "LXEO-2026-06-30",
+      "ticker": "LXEO",
+      "cutoff": "2026-08-10T16:00:00-04:00",
+      "prompt_sha256": "ad69eb4ef8bc09894c445fb7a49b8e9cb7c7fd4ded72b8c1d9dce7151f2cdf95",
+      "history_sha256": "edb241cd39ebede4346ca3f2a8ac94286321044ecb2c567db3065fc8983a5e25",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ZBIO-2026-06-30",
+      "ticker": "ZBIO",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "c67b921b9b6ed86349a2c418aa35a857aaac196dfe0e2f3fe85ab501ddae9b22",
+      "history_sha256": "6ffa61f6a56c8446ac320a590441b30c3960ef9479be6ea2def8dfb344434329",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CGBD-2026-06-30",
+      "ticker": "CGBD",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "2050d3ab43f70f3db8ffeed6e2e5c99b9bf499566664d22a58720bd68e5fca89",
+      "history_sha256": "ec6fbf94f4a9762345e7b6868d20a9529304efef19f977748ee9fe3172d273d0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NMFC-2026-06-30",
+      "ticker": "NMFC",
+      "cutoff": "2026-07-30T16:00:00-04:00",
+      "prompt_sha256": "1f0110785735e0a8d7b100c243d0feefe2cc64491ea8ac577824254d00c9a03e",
+      "history_sha256": "082642fd3fdb30c85ad7ffa3714a0b19dc8cc42b58e097842fb7f1ce320cab63",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "WASH-2026-06-30",
+      "ticker": "WASH",
+      "cutoff": "2026-07-16T16:00:00-04:00",
+      "prompt_sha256": "9e1dc58ed17e2b09747252bba1fb71098107818d2caee579b9f733249e4e40bb",
+      "history_sha256": "d86c66343ce2b4dabf3edfd6cee108933a3670b688d245eafca06f5b708e85dd",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NEWT-2026-06-30",
+      "ticker": "NEWT",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "19c15e4a792f41c8840c4c5968c64684b1d91f6327995604bdedea8993f4c86b",
+      "history_sha256": "be3c5c923ac3c4abafec2d040feccd9ed1d42fe9dd4bcdcda7e21b4779cdac66",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "OCUL-2026-06-30",
+      "ticker": "OCUL",
+      "cutoff": "2026-07-30T16:00:00-04:00",
+      "prompt_sha256": "d7fc813ae7c06586b3ac3a2fb3b2f696c8f1b842fc41460c0d5dffa8529c638c",
+      "history_sha256": "671e76e23a9aa2cdd93257001b3ac9c0887d53ab6b95537ec300dc843ba7112a",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "XRAY-2026-06-30",
+      "ticker": "XRAY",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "b99614d2cc0550bfe36846859225d046ca850037088a6c4453230aa5ac3a2f4c",
+      "history_sha256": "927549b3e056b516adc37cece5fbeea504cc151106caf03dfb0656d9adb59a60",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "GO-2026-06-30",
+      "ticker": "GO",
+      "cutoff": "2026-08-10T16:00:00-04:00",
+      "prompt_sha256": "ed63bd4926216bb62e45f0fd90f2f45172664d51213beeea00ecd042270e94ed",
+      "history_sha256": "0eee0aa19199dc84357b6932404ca189165465555391b3893bdb0f85ff07c591",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PMT-2026-06-30",
+      "ticker": "PMT",
+      "cutoff": "2026-07-27T16:00:00-04:00",
+      "prompt_sha256": "68497f8adbc7cfc7742cc078529fa5acfaecb113ec1c6be42057fa0d921432cc",
+      "history_sha256": "a4afdba5807088a6adb5c3f3624e298c270ccec3347e7a7dfbaaae00d0720e52",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TYRA-2026-06-30",
+      "ticker": "TYRA",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "93dbfd777e6e9306eab99a565b0e1c0971d078fc0e6d65f4d5323648e775b053",
+      "history_sha256": "fdd47a89c809b2e3f589dd887f3f4fbef21a792b93bfa9b37ab2b624aa5acadc",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "OCFC-2026-06-30",
+      "ticker": "OCFC",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "66c2f01c0573d15388ca09d0ea3e003e37e58ac57b85979f69456ad5c8179c7a",
+      "history_sha256": "27cd4b4287f9246bd9340fda1808e9a44d8a517a8bc2754004be0211e399c7a0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "DRVN-2026-06-30",
+      "ticker": "DRVN",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "46fd06cc87984490883ac68af3b599a8fb9aa6b13675b0fc56c34767128c8359",
+      "history_sha256": "b55f29ca8676c9e3de32aa4e38166c681529521e06c4c643f0604a187c18d0fa",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "LOB-2026-06-30",
+      "ticker": "LOB",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "7bf78554045acdab6f56d7534bd89ad550cbe27e97e34359d36269eb10b696f2",
+      "history_sha256": "13601cafa73a722a33ad7ea2d0d1af4bc757849c90ba0678ef07f8cf39ea0418",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FDUS-2026-06-30",
+      "ticker": "FDUS",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "46fd1c2e0e528690716b9d869d597e085d0ee1a66b5e8e1693cc51cbb306978e",
+      "history_sha256": "1378becb522745b2fe7369c8236fd42809c3c181fd12d3958e830e2bd79a4532",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "HFWA-2026-06-30",
+      "ticker": "HFWA",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "5088bd12ad078806cdcbcb3da7213babc4f5120473184d6b6be8ae94d0769391",
+      "history_sha256": "0e91fe1081292d37a814ff5cc57715facbbc790d2a0ac70650c252174a32a31c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PGC-2026-06-30",
+      "ticker": "PGC",
+      "cutoff": "2026-07-23T16:00:00-04:00",
+      "prompt_sha256": "850e3187d69111ba9b0da0e0cebe095621ce27cff8ea545bda40c413798751ba",
+      "history_sha256": "cf3279147b78f281afffdc36d42f1ea928ebd303b6e158c04fc68485d68e59bf",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PEBO-2026-06-30",
+      "ticker": "PEBO",
+      "cutoff": "2026-07-17T16:00:00-04:00",
+      "prompt_sha256": "46f84e8a511b9d5976232fd8a6a7f217d64bd9cf264daac93d550970f978e149",
+      "history_sha256": "142bbbfc383a31c95bdd317888c29ebb73c92a37f869c95dfd55dee7c716317b",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CAPR-2026-06-30",
+      "ticker": "CAPR",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "0ad476d68d920633605cfbc7cb765647284dd96795dcf39b26c02ad24e7c5b7c",
+      "history_sha256": "40ea553ae97b80bcec5306450454b2408d95312d10e5644e4b41f96293138fd6",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BV-2026-06-30",
+      "ticker": "BV",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "85ac7a17a08c614245e6498828e274ac5562ee9d40d8780d5c175262fe0518fb",
+      "history_sha256": "abb913bc1fe64413869129841f228a1d78114c332a216336a9caa4a9ef091734",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "APEI-2026-06-30",
+      "ticker": "APEI",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "546b19e2220af302d396d93196ded14952788b11dd477c6a11483f2c646ed67d",
+      "history_sha256": "52a3d2d3320659373c39ed36a9fd7ef4c426d013874d02828cc6ce7978b51ac3",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MLTX-2026-06-30",
+      "ticker": "MLTX",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "293514833b224f8e532cace0d88cf9339332ab1900e6c1f646cf734bb89edd33",
+      "history_sha256": "441f97db325fef53a2c50dd391178bd79c3552ffe0c2a83d48df1bfbb23533f5",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "GLUE-2026-06-30",
+      "ticker": "GLUE",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "5e71090212286f30f5bb6e17160108ec7f46552e23c8feeb74341c6d8930eaa7",
+      "history_sha256": "462ed637daa43fd2c4d8470d3bf0fe97ef24e41ba86a15e3bb964d94ac393b51",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "JANX-2026-06-30",
+      "ticker": "JANX",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "90f5718797e848bcb5e9e5a57a64b1eebeba0c2e6f2ff9829b522881c536202c",
+      "history_sha256": "8c1f3e3f0a5b331c06132bfa2090215699e8fb519f0d58203ca1c04399d5a601",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BOW-2026-06-30",
+      "ticker": "BOW",
+      "cutoff": "2026-07-30T16:00:00-04:00",
+      "prompt_sha256": "c6afd1206ba72df10058e14a1e145ffe632da4fc26c1ecbbf2336f944c986e08",
+      "history_sha256": "760deb13f614e3236ff9fc5f8a033b2f1600b674fc72525e4f8fd520bdd29ea3",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "VIR-2026-06-30",
+      "ticker": "VIR",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "6ca4e6c443263bc044ba5ac42b8925265ba75fbb3ca9dafa85649ecb57ea48a4",
+      "history_sha256": "0078e10920c6dc8ecc362440810972668945c36b3593c4d2696a70b9ef29d84c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ORRF-2026-06-30",
+      "ticker": "ORRF",
+      "cutoff": "2026-07-17T16:00:00-04:00",
+      "prompt_sha256": "b0c0ee43a77785018c98df6c061987bb185cdaba2b353831dc74e7a211ec6122",
+      "history_sha256": "2d783b41c2dd4dec3fcc6f0d7ae0beb3b18bee9e96c7696dbc431c37b3b5d153",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ARDX-2026-06-30",
+      "ticker": "ARDX",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "92c1490bcb09699ffab1edff18f9722683439952bbce9bb5b6bc0cda2bc66244",
+      "history_sha256": "94b9b12ad86977ccf3ff86d19ac27fe1c36c8a2fd051c7956fc6d5bd37582076",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "GABC-2026-06-30",
+      "ticker": "GABC",
+      "cutoff": "2026-07-23T16:00:00-04:00",
+      "prompt_sha256": "fbf476d4e381122d614b58a4514a2d63c89eb9bd8e4f19265905979f7b09db36",
+      "history_sha256": "7ef88c61682b81729ac7ef64a38db63e79630e1f77f1fc70d4e9e344df0a0de0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ALG-2026-06-30",
+      "ticker": "ALG",
+      "cutoff": "2026-07-30T16:00:00-04:00",
+      "prompt_sha256": "58463a03fa310d136648ca73d548f0a14ee02aa3c73a406429cafd00403f4739",
+      "history_sha256": "948e9c138846d163547ca31788fcdf57709d738701e3dcd053863fd960b0fe85",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ABR-2026-06-30",
+      "ticker": "ABR",
+      "cutoff": "2026-07-29T16:00:00-04:00",
+      "prompt_sha256": "6ab202584a4a9c55aabee2c83e7a856ad5cbbf14905518552820b883143fe055",
+      "history_sha256": "57d9c5c7316f7c8ee53e80b34b8b71f382a827a75dd923992534864de93fff4c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PRTA-2026-06-30",
+      "ticker": "PRTA",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "4c17b6cf9a263a3e03c325b7dd0a99d0979c8ba38857d73809cbe619732d1128",
+      "history_sha256": "235092a67c7da787a0e4e3ec1468ff85885f94cb0f0ac156abf7c94861eee008",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SNDX-2026-06-30",
+      "ticker": "SNDX",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "a68b386d722325f29f0f1bfd84d5cca92adfaa5552a8a9bc9babf336e5b863ec",
+      "history_sha256": "d54f8f6865058a9fa9214d1d4690fede7099a3160a22dcc95dc4d4db42edbc6c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BY-2026-06-30",
+      "ticker": "BY",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "2821e431a2638b322d1c8fa64a26b81332ec8710f40f0ed326f73acba3bcec24",
+      "history_sha256": "a3346cd68760dadc45d2034c2d27fec773114ad3e7ac9fd3783bd5a5f9064e2f",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "HURN-2026-06-30",
+      "ticker": "HURN",
+      "cutoff": "2026-07-24T16:00:00-04:00",
+      "prompt_sha256": "a5e1c14e5970b52bc858bdf6be746aa1efb30fbef0ffd5e69129752c7d7465c0",
+      "history_sha256": "55839dab65852528beca715d9760128992afc31594c1b756ed55f7be6e983f84",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "DNOW-2026-06-30",
+      "ticker": "DNOW",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "c5e4af65ce53ee45f66a6dc3b2975bc98d74edda4d68ab88ac14727cbb40980f",
+      "history_sha256": "91a8a124063f7494878f62c9270fe84e382280a1cf7e0be26a612de811258864",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AMLX-2026-06-30",
+      "ticker": "AMLX",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "60510eb4e0ece4ebbca00bfdd932c609f7cca5caa87852bb0b81ddf45fa44cb0",
+      "history_sha256": "43de5e1c929cb7eb0b108514f20cc5c0c05d4273eaa801c2000087942a9da052",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SHO-2026-06-30",
+      "ticker": "SHO",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "ab0f95fca03f3529c15ace2824637715662e9e5c8c4e7e882551741ac2ae9c5d",
+      "history_sha256": "8831cc5aaf248bc180bedd21ab74eb1961d0e0e568efb27ff189f7e65865c99f",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AIP-2026-06-30",
+      "ticker": "AIP",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "34534724c39d390a15dc3fd540cd1d6003db302d6073b3b09330a3a974c60d00",
+      "history_sha256": "1121de305dac6a090d9cc49fd567f4f134fe50f51c9f7163e21b70daca9785e8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PEB-2026-06-30",
+      "ticker": "PEB",
+      "cutoff": "2026-07-27T16:00:00-04:00",
+      "prompt_sha256": "c84bae97781b0c11b41ea4db8bddf47251cfbad6bd43d7b08bcef0ddf49c26b3",
+      "history_sha256": "84af1fa04557320657549a16efd781541f87035467ba3f25c0dac12ec20154c7",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MBIN-2026-06-30",
+      "ticker": "MBIN",
+      "cutoff": "2026-07-24T16:00:00-04:00",
+      "prompt_sha256": "8c6ec71671308cfcbcb8475eccec1e10325cb9e2dcd7fafa6de72696c1fd708b",
+      "history_sha256": "d4856ad5ca34dc3e0306092a603519575ca7f98505ee02fc2b33f95544ae3ed4",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TSHA-2026-06-30",
+      "ticker": "TSHA",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "588f819d62d555fd7b6fde27e316c385b497f6cae083a6423146994583e703ad",
+      "history_sha256": "f4e5622b817b88927ac323fdf159dae4911b9e2898e4de4d02a8e11a0868230f",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "HRMY-2026-06-30",
+      "ticker": "HRMY",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "1ae2c82cc2045ae092306e60f49496cf25ef7d41ed3b28d38168d5c70f7eb371",
+      "history_sha256": "937b8912a09c2a10b906268835eb0cb0cbce26d6fb2c719ba3f1842f1f4427fe",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AVBH-2026-06-30",
+      "ticker": "AVBH",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "502f4df47b7a8737f344200715989682bec82b28b15e77237e70eb4d05f2cba0",
+      "history_sha256": "badb3235cbe2460a0e3c31aac02e67014bb178cf99348406db573b5f261aa488",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TCBK-2026-06-30",
+      "ticker": "TCBK",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "6ea9b1d4a9269771b9132a60d202685242347a97563181df49f66a3f3810a1db",
+      "history_sha256": "8265a1cd679ad94c5d072285dd5fe7b5e7fec81663c7015ef28f0625e4353149",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CALX-2026-06-30",
+      "ticker": "CALX",
+      "cutoff": "2026-07-16T16:00:00-04:00",
+      "prompt_sha256": "718618dafc408f7a418096cd30f0e8aa797ef8f8598e25d88f5470bc82b1d683",
+      "history_sha256": "1e54081efc2e4233e6af1fe40246880cdd9b3ffe3fa076fa2a8a0a188eb84549",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CCAP-2026-06-30",
+      "ticker": "CCAP",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "123a062137cdfdc473827b975b0002eb00617631f09df2d557acdd336a33310c",
+      "history_sha256": "6ac93d37d89f06a046c7be8b9ce271dbcdaebc126ead5399bd1de39b52216245",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ALRM-2026-06-30",
+      "ticker": "ALRM",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "74f15dc84bd7062c14c3fe7d76477c56952f4cd3e92dea9182338aa0bff97de5",
+      "history_sha256": "44e641c042144c7b34b9325d76045dcbb3f8c80f3ba74414aa4ba59e23f9f21d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CWBC-2026-06-30",
+      "ticker": "CWBC",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "13e565e95ddab70e3d3652991cb8cfb6bdde10a5e37b1c32caaae343e6456cd3",
+      "history_sha256": "cac3324d21b017a37625fd45b5c1c36657cf3ce814d4d0a002cf9eb2fc79167d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AESI-2026-06-30",
+      "ticker": "AESI",
+      "cutoff": "2026-07-30T16:00:00-04:00",
+      "prompt_sha256": "923349f42f965adf9208ed09c30d9993fcc7778fc61b2e2399cfdfed6b3a34c4",
+      "history_sha256": "804077f07a2ea3a945353da84ca12aad0b2f15d925f40bc5dde70b2a9d620086",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "HBCP-2026-06-30",
+      "ticker": "HBCP",
+      "cutoff": "2026-07-16T16:00:00-04:00",
+      "prompt_sha256": "30d7f84f349bdc90766c134016b2fe19f94f45bf5c09abbc1d13a69e6bfad189",
+      "history_sha256": "5f0c25c6b2b079158c5b4c82180088d2b067e5fd86078f1856707477ae29ea04",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ABEO-2026-06-30",
+      "ticker": "ABEO",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "5920f468cafe3c71a385e43a2168b4ffa8bbfaf6f28068ec26295df5f339f17e",
+      "history_sha256": "8aab936533d116beb6bcf49122c10a8162cc66dae8e87818ea8e13d6e24d5749",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "VRDN-2026-06-30",
+      "ticker": "VRDN",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "49749645e223d5b01a1ffa02c51b2c08d17661a42148dbae15e53c4bedce300d",
+      "history_sha256": "975d223865635b4553fe30dac6c19b4e2c217c9702a03c677087d01086e9cb1d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "WYFI-2026-06-30",
+      "ticker": "WYFI",
+      "cutoff": "2026-08-10T16:00:00-04:00",
+      "prompt_sha256": "f1aeccd0cbe2a338e0882f16cc3f4d9243e47d26cb6485d045006ed976f146bc",
+      "history_sha256": "53cb6c58103805c345825e0cc9fd5c05804e96a05e64e3c879078d03e8e7a530",
+      "undated_history_rows": 1
+    },
+    {
+      "case_id": "GSHD-2026-06-30",
+      "ticker": "GSHD",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "a6dd6d4bbc4c760fd252b7023218401bba233728309003470340fe788244355a",
+      "history_sha256": "61a609c83924b00a978b80e77d14e3e295987a166daf7a48538402b24616ba14",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CIVB-2026-06-30",
+      "ticker": "CIVB",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "6a4e1653fc8306597a91907a42839d5a3b61f7b8840b24476a85739a179078bf",
+      "history_sha256": "3a74d05572f34ff271ed30b1ebd5edb83a5a412b473f2f95b3c81f941508ba31",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NTLA-2026-06-30",
+      "ticker": "NTLA",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "5c716b8d4f32c303a1fab52d2b5721487b1c064997e97df60dbc0cabedb8ec7c",
+      "history_sha256": "ec7e775251f5fef76a53557359cb9d355d21cee8debba06cddc21f98cc290285",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SAM-2026-06-30",
+      "ticker": "SAM",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "e3f680ee72119f6a162ce809f2c6b1b58944683c0e90b8bbe4518ec952a09a6e",
+      "history_sha256": "fc9f3d5b719f2915c9f658eba31b5643948c2f5a8fcc37a2c867dbf01a07f099",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BMRC-2026-06-30",
+      "ticker": "BMRC",
+      "cutoff": "2026-07-23T16:00:00-04:00",
+      "prompt_sha256": "349faaaa0bfafac4ee408f119f7cea523acb7761d80a9d44145e23f29ac6a4c7",
+      "history_sha256": "fff6a30965c9d6efec75c12013c9f580a9d0420aa59bfa4d372d593e6c02d569",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BRSP-2026-06-30",
+      "ticker": "BRSP",
+      "cutoff": "2026-07-24T16:00:00-04:00",
+      "prompt_sha256": "ae71c688c26eeb5bf1f0e4c0b4c3ca3445b99b60dfea5618cc5e645ab32083a9",
+      "history_sha256": "466e3f6a5922f43a90926e272198c3fe8859120881d48febd296ef19dbeb1b85",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CLYM-2026-06-30",
+      "ticker": "CLYM",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "0291bc1e51dea70812df40a176b9c8bea2a965a744f9c041c9d8dc11bb1dde09",
+      "history_sha256": "df872f88e23f41c6be8b37c6ac39e5cb40b4e784da788f10219314ad07889aa8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "GCMG-2026-06-30",
+      "ticker": "GCMG",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "575fd569ba3a2c67eebd2ab67cf8cb6c7aa9b80d6131788272e8ec6641f0bdba",
+      "history_sha256": "f40a4b042ef82dd1a125b06c3ed3f1d8d0e43df0c8c6bf9f37f11fb029ba5140",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MFIC-2026-06-30",
+      "ticker": "MFIC",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "fd5b4f2f9898151da7adc2cec1ac84c0287dfdfa105d541e94d0e392bf957a0c",
+      "history_sha256": "8efd243a2b9085ec51f03f7598db4914797e9e80245ba915b13f07d3a81a2af0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AVAH-2026-06-30",
+      "ticker": "AVAH",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "79f3c0a07eb3a23b4c5bc037fa5ea5edfbb011b384bc040f22e7edbd9298e656",
+      "history_sha256": "91e1f7f60919b8b140b61768b2143cf573e8b6dc03e09c88b7a98fe9cf374edb",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "OLN-2026-06-30",
+      "ticker": "OLN",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "086f2fef00e3938e26a7f20936d769b128a782363b009859da1e294681338158",
+      "history_sha256": "df06a4316b879be070fabd31dafdc4fc542ca01538e8833dab6011a21c8317df",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NNE-2026-06-30",
+      "ticker": "NNE",
+      "cutoff": "2026-08-10T16:00:00-04:00",
+      "prompt_sha256": "c774ef7b603071d33b419afd298ab30932d368dd085393c789528118d633bfd2",
+      "history_sha256": "fb8ea3e07d851ed4329235b1e50e17438538ad52564adb0b67a6d24bee3d336a",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "LINC-2026-06-30",
+      "ticker": "LINC",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "276fce7fbbdf505a2b6ecc476d7997e1ead298d700ddb8b917a904259db32b22",
+      "history_sha256": "d0402e97c2b10508aa9573b36977d541ecf83cdecfc4a3d72a50b182d0b689da",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "USCB-2026-06-30",
+      "ticker": "USCB",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "e5cff23c4d9a3a621403f6bf7f8183ecc73f157a2fb636b885b3a73ac30dde5b",
+      "history_sha256": "d7a5c5231da806956bde0a38e17b78703f47aba0b6ffa3485583a5061beb5cff",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ACDC-2026-06-30",
+      "ticker": "ACDC",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "46b335145b240dcd460a1f480dd7d04d564386f77882c8db3d19c68bdf488518",
+      "history_sha256": "dbb520888c334b598827c20562223e888b4160a441af0e2dec6fb900315f9d29",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "EDIT-2026-06-30",
+      "ticker": "EDIT",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "1a990c684afa236ffdc436c9948c2d12bd8a537bc4336beeaa65ec24a79ed283",
+      "history_sha256": "40a7edf4cd6bd44ea44d0260733df428edb8795f730190b7e468aca382da2361",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ENR-2026-06-30",
+      "ticker": "ENR",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "8d8a022f40a34999021991ba90d5add24f3baba835e31c157d98beacf648ed06",
+      "history_sha256": "136b122605b085301499da00fd92788e7ebd06ff25b7c134209bf1de0afd61b7",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CADL-2026-06-30",
+      "ticker": "CADL",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "2a6683944cac163a327ba09ba61db3a8c7b9ca56d5031cb0b7f378916022f17d",
+      "history_sha256": "6ce5e783d730ccbb1040bf18b79849a5464d1ae31ab47e7d6ee31ee6a5fef904",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "DCOM-2026-06-30",
+      "ticker": "DCOM",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "27a01d2b7d259a439d94876d821231c8387d899cbf8b46fa9a96ff3f647c1868",
+      "history_sha256": "8ed2044eb0a69040acc0ad7ea648cc508d9a660671de863cb8acd9a514427820",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "JBLU-2026-06-30",
+      "ticker": "JBLU",
+      "cutoff": "2026-07-24T16:00:00-04:00",
+      "prompt_sha256": "c3f2263cfba333974e3b1dcfe7315daeb2dc9afb915a053f798bdd0f4a2d53aa",
+      "history_sha256": "0601495d3997fd296173e5d7d58afb758ddec3b1c7c75aa997ea8ce96a46739d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AVTX-2026-06-30",
+      "ticker": "AVTX",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "63a5d61fa410b80bbc108b49f14aa8b6e2d63b16344e0e0521150e6f1112a5b7",
+      "history_sha256": "a4b57f2af7464688234cd0549b98962de462129631b517d66086ba54e0ee47b0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MD-2026-06-30",
+      "ticker": "MD",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "43ef7f390ee07ad786df6046c76af5e9f41a80fe1ca06ccc43371dfa26ee0d03",
+      "history_sha256": "c0695cfeb6779f3200c33157be9990177ba0ef33ce12dd7cc454c8afc2e953a3",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PBH-2026-06-30",
+      "ticker": "PBH",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "53ad2b2897096f69c99c75c838bede8765975a9baecd550be6323ba362605845",
+      "history_sha256": "b144a148e6f48004c898e9d9bc3e2b3f455037b0b402a4865c3f69e2721d9a6f",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ZNTL-2026-06-30",
+      "ticker": "ZNTL",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "ab0891d0f0456b48b09f374dd3c0c8ed5b39f64e2307c37bfc79fc13e72b89be",
+      "history_sha256": "8838fc845f978278953d36da2f0840bbb9288dbbb1099674912e534aa39b80b8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "HTH-2026-06-30",
+      "ticker": "HTH",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "242d209982809b043bdf22bea4824e4ea38e2e4dd34185c4fbab664b03945c11",
+      "history_sha256": "f05c91dbf0e2736587dab81b939fa60360028896399c89c5a8354244becb2b5a",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NAVI-2026-06-30",
+      "ticker": "NAVI",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "3a719f23093c2551ecdb858a49cd630fe85d75ade463ed0649022c139b46ee53",
+      "history_sha256": "794be2665f0cbfc916fa1f910d8b90759c8bd44203e5a94cb37753bb6d082718",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "RAPP-2026-06-30",
+      "ticker": "RAPP",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "b84348764db564a16d540773d4f44f5af3794f339a13ddbff21063263d25ac7b",
+      "history_sha256": "7fb4622beaf39363686922bf28e72556e44763f7eebc35b284226434dc0fd00b",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PROK-2026-06-30",
+      "ticker": "PROK",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "65a9db67740d5816663a6e4406308881adfaf31388e281635a4f0b7f5dab97d9",
+      "history_sha256": "46a9e065d844fd81bd939afd0f27f2ec394a3046d28804a3b53e5776d0422644",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NWBI-2026-06-30",
+      "ticker": "NWBI",
+      "cutoff": "2026-07-23T16:00:00-04:00",
+      "prompt_sha256": "29a8031fe183a1c827f25a1a51a54978e097d0b4a01fbd7f278445beb832b432",
+      "history_sha256": "d0d1065457a4609d103ac01743781647ec36c928f4f89159e82a1e152021df5f",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "UNTY-2026-06-30",
+      "ticker": "UNTY",
+      "cutoff": "2026-07-10T16:00:00-04:00",
+      "prompt_sha256": "4b6b457bac819a6a61fb65c7c81ac00426b4dd6328a92646c76ac14dbf7d1cb3",
+      "history_sha256": "5e29ac5d2281fb0f386f05eac72853cd9ae211cfc0c96722d92073810eec8e2c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "VVX-2026-06-30",
+      "ticker": "VVX",
+      "cutoff": "2026-07-30T16:00:00-04:00",
+      "prompt_sha256": "d9fd51ae9c9c940d16065c5038ade99e5a0463811aa7f828539e9b4edfe30f22",
+      "history_sha256": "952cb7cd35f7f7ffa1addff5ce56996f25816fc53226703799f1e9d541a9cced",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FBIZ-2026-06-30",
+      "ticker": "FBIZ",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "6a41ce059ca922cd19d933ac057cf880ca91540e1a96d358a79dccf26a78b171",
+      "history_sha256": "1044c2232ec9d23257fad7acc277ca4501b763e21170f56234394ff39444feb2",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "OVID-2026-06-30",
+      "ticker": "OVID",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "0800c97046d19cd7789a5a5bbd2498fe1378f7136320bd02318dde5f733ce599",
+      "history_sha256": "9e6a94642cce4aff28749a22d6a5ba981f19c720c4521c713d9ffb81b9e476db",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "OPK-2026-06-30",
+      "ticker": "OPK",
+      "cutoff": "2026-07-23T16:00:00-04:00",
+      "prompt_sha256": "32aa1b72cba9fc3b1a2210ae121f30a58f51534c4a887d569c6cd3531c08583a",
+      "history_sha256": "f270ad058d84ab958c09a1521cb8d7011afeac4913d14141cb63001d80bee62f",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ENVX-2026-06-30",
+      "ticker": "ENVX",
+      "cutoff": "2026-08-10T16:00:00-04:00",
+      "prompt_sha256": "3b7841f11986e366642400fc929d070361a3e56cbaebe67d6f8614cf45e53262",
+      "history_sha256": "2adbfb039c1bcbd9ffd35ff3cc43328aa16644a33f2091e3c061b0a2ca85c50a",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ADTN-2026-06-30",
+      "ticker": "ADTN",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "2a721329f0c65233a65d6f6009dd8dc846ae33a9d819ad4618f38c3ee2c07b92",
+      "history_sha256": "894b03dcb3c1457978252353763a4903d339792193536bbc68f27fe8bd92cf0b",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BRBR-2026-06-30",
+      "ticker": "BRBR",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "6dac71cfd062f3e3dab05cd25b9aa0883808aa017cc3a89985b5cf3aac7ef594",
+      "history_sha256": "6a4ec977ca6ccb55ed82fe682aa3cb46b5b0b7901a557bf6716ec75d265c5d9e",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "RNAC-2026-06-30",
+      "ticker": "RNAC",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "9176dc509d7faff19f2efc872b378b0a60e937602dc6b34128064c3c193ab081",
+      "history_sha256": "286de2a781eb195e232b59756b7b17a97cc83833499dc1ac40a4a5000cc2abc7",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FCCO-2026-06-30",
+      "ticker": "FCCO",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "827c4786f894a164da46eb42de216185f1bc8cabd76b7eb51d45d584c5d9863a",
+      "history_sha256": "fb72f265a7b482b646e3292c618c8f687360a84d3666340e7a38234c453cc1e2",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "VITL-2026-06-30",
+      "ticker": "VITL",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "bee8fe5774783ac9945885ec1c1ad20128335d57b86e9a6ba5a9663c86b231c7",
+      "history_sha256": "3c07ae309216fa00e1e177daf71c546967010421d31e28a7dc1519b42832c56c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MBWM-2026-06-30",
+      "ticker": "MBWM",
+      "cutoff": "2026-07-17T16:00:00-04:00",
+      "prompt_sha256": "c73fb5c918267bf7c7fd2312b57c372534619cba9485bd33378b13cb59517832",
+      "history_sha256": "118b1a9e6f3a9998660cfdddc1a2b8be6db09e794c650e6f3a42b06da171f9af",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "IART-2026-06-30",
+      "ticker": "IART",
+      "cutoff": "2026-07-27T16:00:00-04:00",
+      "prompt_sha256": "68ef3b9a9e08dcb48ded7e8e7fcac16f57034f63e162c5dec0e2c7744ffd3cf2",
+      "history_sha256": "1a235b57ad75919339cb3c1f60e6a0a8b40a30390997ce1e1fa3ac96497f6ad8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ACNB-2026-06-30",
+      "ticker": "ACNB",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "1db942ef44eac901ec9143ff2c9d2921364467fb117da8c007694efe8d262643",
+      "history_sha256": "6c3a440f35fa79764c4e59da439a8d53b8d00cd0b78888a619f256c6a56623e2",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PRKS-2026-06-30",
+      "ticker": "PRKS",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "c4af6b8684c22e5101b410f0c97a988c85ed065172647187eb704248b4c63cc1",
+      "history_sha256": "0a6bfd9e90f32d9e79741773e0fcd554d5628bb3c60c59db0f9cd3d6a18ece54",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "RLJ-2026-06-30",
+      "ticker": "RLJ",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "f33f56d925aeeed00dc12fb1dd51b605d80ed49df0f0d2ce7c79c5eee41c8abc",
+      "history_sha256": "a5f1a33e009d0733bf8edc5e887ee1adc6343181f999d563ce0c10c2e49d3cc0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TROX-2026-06-30",
+      "ticker": "TROX",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "81ada8759360211aa026d16532295cfdde55a6b21dc10c8f6caeee8383a3be06",
+      "history_sha256": "d83dd59b07795907e28b757cda699c93c824f770e14b2193728c8aadbc5c7f21",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TMDX-2026-06-30",
+      "ticker": "TMDX",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "d0b5c79076784fd2d6e4a3c8a2b8c2735221bae0d8968d6bbab10f5acb6de9df",
+      "history_sha256": "96194a12dcef13b4fe9cedf79757de0df0f1dfc3ca5ea284ca7096a3d7ef08bf",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PRCT-2026-06-30",
+      "ticker": "PRCT",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "6f3780cc02d215e787da52f028d9ad6b45fe54f327a13b7c7a0be821c5af4dcb",
+      "history_sha256": "6902bdda3da343188c09b633a53207931ec44224cc400cba0edd4f7a2dde8df8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AMPX-2026-06-30",
+      "ticker": "AMPX",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "d4f87296d80ae2528495a4918aca3b668ef0ca7c82d37d14c57fa3e559cc8ad8",
+      "history_sha256": "8fb6ac939f36b26f720c7b11892bb2c6c16a2d2a60137846cf443a9ecaff97b0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PSTL-2026-06-30",
+      "ticker": "PSTL",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "45b5aafe9b75c61e0896be066032a6aab38f98f04191929cda5f79e07e587cfa",
+      "history_sha256": "29af51bb8586b2717f660249c3c0d463aae186df25fd08c2d7b5fea6ac213f1b",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "OCSL-2026-06-30",
+      "ticker": "OCSL",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "770e03867b7aa9a3b217ec1d1873ca582d7725632e847669a2417d1a1ceedcad",
+      "history_sha256": "8a3a3060dc0f8eb82971fe5de892ec444003850bd1bb5247e96c59f5e8a765e9",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "EFSC-2026-06-30",
+      "ticker": "EFSC",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "a9f13f6593f8f6daea9178b057ae9ff7194f5d66211b94d903e253a62d687e34",
+      "history_sha256": "2c31f612e5be305c0301887cb1571adee98c5692b14bc149430e0cff2d1a7abc",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "RCKT-2026-06-30",
+      "ticker": "RCKT",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "dad76405c97ee43399fd1a827e3d8a78e0b7cdc08eb7be9e8735ff5df7a9d2ca",
+      "history_sha256": "5b60ea2dd1764ac47eb943e5d6885e1fb0a90852b10c79f55c57ddd9eb8d9511",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SVRA-2026-06-30",
+      "ticker": "SVRA",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "5fa2d2e9c416f5ea56c667a2d78a15dfc012a28fa132e1229d40f75f5167dfbd",
+      "history_sha256": "a8e2241272c72c289e101cb5611d924fcc4311d28d93b0f7a0c863f8aa770903",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FCF-2026-06-30",
+      "ticker": "FCF",
+      "cutoff": "2026-07-24T16:00:00-04:00",
+      "prompt_sha256": "46f871f713dc088a3fa07515a37d1fc35d4b367c8cc36ddf1cc86f58f6744a01",
+      "history_sha256": "caeb157d5d756ab7a38030ae77bfb858f612608ebf1d6b2919293390f13ced57",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BANR-2026-06-30",
+      "ticker": "BANR",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "0a9574fbeb8e0f195253b3594a0a4a5f2f00e345775d26b3750af474e8a74dec",
+      "history_sha256": "cb2851fd06861f09b18975725ec5357e79295d7d2be286c3d9871b5c7c5bde08",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PINE-2026-06-30",
+      "ticker": "PINE",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "d2cab4674e57753724053c04963ed21af39bd64e640cf5867b009808673d78c9",
+      "history_sha256": "17f3bd84caa8f2792ec8ca3fbd58045bc70601ea447ee95c03a44b0250b626b6",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "VRTS-2026-06-30",
+      "ticker": "VRTS",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "0d41bcef65c8df0f06e223c9d79f559b7ab96b272259c0f4815f9a2d3f62556f",
+      "history_sha256": "aa5530f00b1a1b25307aca46060525c721b98e30f5c8f80156593ff5b308cb66",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SBH-2026-06-30",
+      "ticker": "SBH",
+      "cutoff": "2026-07-30T16:00:00-04:00",
+      "prompt_sha256": "d6f88509a48a22d85456c83201c8a597f74df78cbd53ab2b6b0a62e7d40bb470",
+      "history_sha256": "9b72154dc5554c73b8c1091fa0fa103b5c0df5f321afc9ce637134df9545e30f",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "IMMX-2026-06-30",
+      "ticker": "IMMX",
+      "cutoff": "2026-08-05T16:00:00-04:00",
+      "prompt_sha256": "7be4e6b77a4ae09fd10ab54e4039d41c01ad54eba32565bcad5ec232212cabd4",
+      "history_sha256": "04485c2420bebe0a258d93ff4a1e1b1cba3b089f411a97517760da7b3415a038",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FUN-2026-06-30",
+      "ticker": "FUN",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "c0cb70d092870cac9960f6e1be78d9c785d61323524787ea5fbb3ba2f011b93f",
+      "history_sha256": "f9ff25e87db6a8816f79398656e8b2e566c7fb4c634fe35f18f048f0e72bcdcc",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MAZE-2026-06-30",
+      "ticker": "MAZE",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "289f9a1b2901c4ec644eba03fe2fdbd71e8c309daacf8fe5159d025f938d6a53",
+      "history_sha256": "46433b2d5ab96d16b6dc8b5459284d2abbef3c7fa28c43416bb93e847f3af8fb",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "WU-2026-06-30",
+      "ticker": "WU",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "5beed9913c20b60d6d0522cfa3e82cdec873bca83de9d7c829cc091dba450e6f",
+      "history_sha256": "705090b6f93a10bb07bc152740a8d9e123a3a469cb40322c5e624de4924d0665",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SION-2026-06-30",
+      "ticker": "SION",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "8d73217cd3eaa3fbe56fe0e0b29168cfb697e91745913ac183faffdd4d4f0460",
+      "history_sha256": "8c90fe8f74001daf07ab3f5722679d81fb81e9a8d89401f565b8cbc3b116636c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "RPC-2026-06-30",
+      "ticker": "RPC",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "97049f1190fe49926d266a5a3dd364ebe5f9fd1a21312cac3065d4f08c3ed76b",
+      "history_sha256": "1af1e793866815f943d64a4e6ce2f63940ea880979ba9419cd3a79c48e7f950b",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "QCRH-2026-06-30",
+      "ticker": "QCRH",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "a68e67c85e34d099eec790f8b2814257c614ff70893a5061b96042a73b051439",
+      "history_sha256": "3e9a80f6418b1842d55522397af5787fcb5afc11fb8659929931319bc0838eca",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CYH-2026-06-30",
+      "ticker": "CYH",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "4c008f2af680d60c8239370299ba7ffca57eee7188ba69aabf83b0c87641e95f",
+      "history_sha256": "036bd90953bf0036f323c12d208ed51129383503fe5e2be8c7ace198d5b60ec8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FDMT-2026-06-30",
+      "ticker": "FDMT",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "f290402bdece52d9be1a4945c1878beaf79a7f411bc3ebb3ee6cdc9bd1bdd37a",
+      "history_sha256": "52b5927d75c2ca8311a9bb0cb0eee1ccc91d995c579ea6a464e1d7c446dda0ea",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "HOPE-2026-06-30",
+      "ticker": "HOPE",
+      "cutoff": "2026-07-23T16:00:00-04:00",
+      "prompt_sha256": "5bfcbbb9017d54830099989344b439bbcb88b2ef048ca1e34540a9ce49342078",
+      "history_sha256": "613906a962c9c3d36c41ecde9fa3c910805aebfe11c89e569562c573506e66b8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FMBH-2026-06-30",
+      "ticker": "FMBH",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "73d467a5e7d8e9d9494cfa3de0242c3e2d029f3ab7c3abcc96f90b911293667e",
+      "history_sha256": "d5a7967eb55457fe88173ee91f46be1a872361f141af255d0c928658d1ef45fb",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SABS-2026-06-30",
+      "ticker": "SABS",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "51cdceca527f450e4fa5049183c041afd92a0ccc75f42a813db9ef461eb292da",
+      "history_sha256": "f40c55a8368ff718543b289c07bf2aa363c555119290a4540b48b6766e9291ae",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TALO-2026-06-30",
+      "ticker": "TALO",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "a23f8a0b80dbcf29026b34ab30cc3b0ad81336ec707da3194038ce9561c2f9ea",
+      "history_sha256": "85cb15e57ae208422209f2cf1126e3e1666dbe126dd986a37de40e75ecd3e929",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ARTV-2026-06-30",
+      "ticker": "ARTV",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "dec943070064d5b6a1b1d41c9ddb5b51e3b2db127c6b5b81c0354e3bdda8f4d1",
+      "history_sha256": "56a40075d83fcccf15c3e357891023a8f2100399013e481f936e900fa30e3fed",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TNET-2026-06-30",
+      "ticker": "TNET",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "833249c02e57c00d3c41b2ef0a522812355bc9f981ddfd49c004276426a1050a",
+      "history_sha256": "09ccf591caffc0f595029144492624448bfad7d21dfe349cef1ea8c33555715e",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AGIO-2026-06-30",
+      "ticker": "AGIO",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "56d3e967b1e46f2ed7b07ae9de63fe6f923a778d483a2f57191b1af9630488e2",
+      "history_sha256": "286407be260d129d9123ae72c036413da6b06d6f585551db32ba48ab04229bb6",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PBAM-2026-06-30",
+      "ticker": "PBAM",
+      "cutoff": "2026-07-14T16:00:00-04:00",
+      "prompt_sha256": "9e5ef3962ed04fbf2fab0e73dbb80604e5148e3f40b6bab9cf94ee329d6acff0",
+      "history_sha256": "3fa9ea5b14c49cb1c937ca4f9f0d54c0c6b31f55de33c3aa75815cdea703c13c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "STOK-2026-06-30",
+      "ticker": "STOK",
+      "cutoff": "2026-07-30T16:00:00-04:00",
+      "prompt_sha256": "d84cea0cf8a068ec99ef9c168a6f20379b453ac55739ce58400b90ec197a6a85",
+      "history_sha256": "c232e7accde556f1a47d9ba4c6de033b73e9583f62ae53dd9206bb41c9d3e838",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "EGBN-2026-06-30",
+      "ticker": "EGBN",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "3d6ae0e844c2a7badc3171aa6e81ec1ffb4342dcbfe7ab95b3865f6b0b5ad6f7",
+      "history_sha256": "c9cd57d75680043e038755b6549fb97df7dae91ef795aab2b186ebe9ea49ad64",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "IMNM-2026-06-30",
+      "ticker": "IMNM",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "9a738c0ea0e2da3cf85ef66f114cc2fde2539d175b587d6c30c04551be7c6f59",
+      "history_sha256": "d0688d5e456dbb6f763f5125e7c7a1704bf21a5eb5c887c64b0c6052db87a606",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "EQBK-2026-06-30",
+      "ticker": "EQBK",
+      "cutoff": "2026-07-10T16:00:00-04:00",
+      "prompt_sha256": "03f5d4e55f85e93829df57fc76c3278fe02725932c382ab7b50bee432b87e7cb",
+      "history_sha256": "bb53f9bea8d24a2a2c910ed1bd45917aed41db28d984058bb9d060c05a35c8bb",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "JACK-2026-06-30",
+      "ticker": "JACK",
+      "cutoff": "2026-08-10T16:00:00-04:00",
+      "prompt_sha256": "106c9539b27d63549f29c8533401a5abf7dfa4d1d2ffacd942b4c1d3111c44d7",
+      "history_sha256": "e32464e62028e3c0bca3daee67eb4314b38d2391eaa144cb47144e07d7b39b03",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BHVN-2026-06-30",
+      "ticker": "BHVN",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "fb9776ddab7fc1be2996cb6f95da5d6b1d0d1036343d873a759852b5b3585537",
+      "history_sha256": "a0e884f3fc50120cf83dc6a830a854183c2e5ad378d03832e530fda0468ea741",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CTBI-2026-06-30",
+      "ticker": "CTBI",
+      "cutoff": "2026-07-13T16:00:00-04:00",
+      "prompt_sha256": "8d3c5101246303b3c799016cd060e87ac9c6068e03d9cf12ddffefc2da275c8b",
+      "history_sha256": "9c65ff7bcc7abb3a0f1dc5773bca5b22b0f55df3cf30e17f9144c331d8441194",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SPB-2026-06-30",
+      "ticker": "SPB",
+      "cutoff": "2026-08-05T16:00:00-04:00",
+      "prompt_sha256": "04c94d61cea6664e05aca439fbb40f67d7f40f2123e629a171737a519a8cbbb8",
+      "history_sha256": "f0e0ba94edc82c07c8e9e7ff940393253e22f39f0d1276e53f6c1a2be8d5238d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BSRR-2026-06-30",
+      "ticker": "BSRR",
+      "cutoff": "2026-07-23T16:00:00-04:00",
+      "prompt_sha256": "d745e614b3193430cd59a6a270f63c9dc651f1f193ff328e5197c00924cc9306",
+      "history_sha256": "7eae75e8b91deadfed3e38ad96b35c22a9d701e751fe5de810f7d3d60213db6d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ALRS-2026-06-30",
+      "ticker": "ALRS",
+      "cutoff": "2026-07-27T16:00:00-04:00",
+      "prompt_sha256": "21e90ff657a77d443bbdeca50972060497926e00813905a4c41146bdaeb406a2",
+      "history_sha256": "e5dbe1e0a861d5cc9c20172da44199b99e136e1578c0f44675b2638f4ff78c0d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SMBK-2026-06-30",
+      "ticker": "SMBK",
+      "cutoff": "2026-07-16T16:00:00-04:00",
+      "prompt_sha256": "aa58ff62eb4cd2564a41b3c2ddfd686f6cc4aeaf7e9adc228358c8df936662a1",
+      "history_sha256": "e26ac0148efe6ab53899a8dc8be5e8c3d9b39964b6e42aa3273bb3867d231ed1",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "KMPR-2026-06-30",
+      "ticker": "KMPR",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "d027fe63a0c13bf5e59a6501a67c00e0fafbd4a4e9697b44aae832fe84ad03fa",
+      "history_sha256": "b4fc7d6c5fec641d01e5c7669be7cb4e53ddb696fb5a8e33fdab3711f8388153",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "FSBW-2026-06-30",
+      "ticker": "FSBW",
+      "cutoff": "2026-07-17T16:00:00-04:00",
+      "prompt_sha256": "90960368dc0f5d11e0242b576bdfb2355728662e9828cea6b450cfa9fc3ccd8d",
+      "history_sha256": "e125b64a46cd3a919158c4ebc5c59aa720b101762702da453c15fcac446c0cc9",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "ZVRA-2026-06-30",
+      "ticker": "ZVRA",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "079019b0f438f8eb0dead322eccfd5789c0e9ee5eb558be936fb18e9567b8b72",
+      "history_sha256": "4f528f3ea0a7615341a67c9ac8a8b4d11251d88d4e48f0990c07d80131feab26",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AMCX-2026-06-30",
+      "ticker": "AMCX",
+      "cutoff": "2026-07-28T16:00:00-04:00",
+      "prompt_sha256": "b4bcf737b4b9aaee814e8872035825b132e5a8b04627f32367905e522ffea6ab",
+      "history_sha256": "023994fd5b7d87db56da9eddd285d694d9626a06b9984db512c9995786af6af5",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "OBK-2026-06-30",
+      "ticker": "OBK",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "7f65bf83e01165a07678d20558e8dd07d6ed7e50a8ddddb7f89ad11e39539d60",
+      "history_sha256": "1397ea74009dfecf368bec4eff7e37c9d63896216cb25013e4bff81dde9f1b62",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "RGNX-2026-06-30",
+      "ticker": "RGNX",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "dcaf026c624c778876a7b7636ba45d91ea5a284d6c27f5947cac5332e3fc25c0",
+      "history_sha256": "750dcdc62ac0ee6b206e0a5bb9a735b33acf411bbbd8065b7b145537f275991b",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AMBQ-2026-06-30",
+      "ticker": "AMBQ",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "2f878529acc543a089b0768e3ac8ef13281ec7fb378b318c2be52d1633424767",
+      "history_sha256": "05d48ddd04b270e8da1f2012b153dc721cda60864a15611687aca2511c02dff2",
+      "undated_history_rows": 1
+    },
+    {
+      "case_id": "AII-2026-06-30",
+      "ticker": "AII",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "89b79b1490b3e6eea11e84e30ba6e4d2d4cebc25dabbe5493314d265a9cc295e",
+      "history_sha256": "6c8bc6690369bf97a2f5bbeeddacbdde3e816c14c1ccf4de034c360df93f034f",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MPLT-2026-06-30",
+      "ticker": "MPLT",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "ce27d94319177b05f04314eb17305f641c4b124aeed38f1f70155c11af8c1f9e",
+      "history_sha256": "4c4ff6ee00cffb464fe9aa4c4fc240df5c6b76e392fd9852d7c7cc1d122ccc88",
+      "undated_history_rows": 2
+    },
+    {
+      "case_id": "DEI-2026-06-30",
+      "ticker": "DEI",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "776ba5dd6471a54f7f05da2145d604676e22b3b7e22c47136557ed9e0515bf66",
+      "history_sha256": "6f62c5a0ace447046568814f211e7d902a4e597f5c0c070e8a9342adf4e8d92e",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BUSE-2026-06-30",
+      "ticker": "BUSE",
+      "cutoff": "2026-07-24T16:00:00-04:00",
+      "prompt_sha256": "1d4532bfc52a32e5143609e5e982cbbad103ef14d329fb844986ae1081b78377",
+      "history_sha256": "52713e2051399953f4b5217dec935483f2100928cdb96835f0232d499ebbbfdf",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "HBT-2026-06-30",
+      "ticker": "HBT",
+      "cutoff": "2026-07-23T16:00:00-04:00",
+      "prompt_sha256": "085e5c675a40caf72c2d2e59329764c81c6d393a989bc9683c42217ca4d52696",
+      "history_sha256": "a61035fa9d36e55675d91f2f8595d1efed8351dc45d2512bed67963f074958f5",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PFBC-2026-06-30",
+      "ticker": "PFBC",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "8f0f29328b62a30f12585e1e31a5a19687cda7d113c033bb79f149495f1831b2",
+      "history_sha256": "a195f3364083921ecbb1c1a2cf063b3f69adbc67e10edcf9ea3cee7ee31d3590",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "STTK-2026-06-30",
+      "ticker": "STTK",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "d0c73cacab55bac0598f8cbc6309d364eec0ebde329a676901dbd8b8c6f681fb",
+      "history_sha256": "725f372491f6c8a297b17779c3e65ec0aee8d5393e340595a79be577890173d2",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "JBIO-2026-06-30",
+      "ticker": "JBIO",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "2e0558f00ffd21f567babc0b46194bc1edbca8b2d37942993cd559c721c487de",
+      "history_sha256": "94f4313f61ece26d67fe51da263aea2251fc7c3656ad9785d008787d5b483d51",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "AVPT-2026-06-30",
+      "ticker": "AVPT",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "7ec9230eb4fa1d410fccb4b230edab1b182ec3dc66e08e5d4f059f29d7b0b8e2",
+      "history_sha256": "e626db9467dbe2c42378dc63db6968683b5159ba8cf8519c67760c771807977c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "BAND-2026-06-30",
+      "ticker": "BAND",
+      "cutoff": "2026-07-27T16:00:00-04:00",
+      "prompt_sha256": "3c2c0b870bf1eb62a3f8bd79ae0b301e92d115772d1a47efdf4a970de0006ace",
+      "history_sha256": "23540e709dcd38e09e4dba3bc74247bb2b93a7d69d1872c1ba2327a5208550d6",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CENTA-2026-06-30",
+      "ticker": "CENTA",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "5453d2fc8812bcdcb8c85412a1de514be5876bfb1fb1b16a351a7a61166a2c65",
+      "history_sha256": "e787737a366c42c9e545506fefaebf4fe19c140fdf242f05d91608ea6cd48af6",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "STBA-2026-06-30",
+      "ticker": "STBA",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "63bfaa2216f90205da9c7167914d4ee5a8fa5c5bb1e8aeee4a893ed898067225",
+      "history_sha256": "16076894e78820818b291df26be60761c98eb08a98d21ebc9b497f468858df1a",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MNR-2026-06-30",
+      "ticker": "MNR",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "9d0e51e9c917b428f61971df8086306c8218a9cd752071b1b1cefe23b1e24f26",
+      "history_sha256": "a99686eb0b44872d4dc109306870692c8ac95c08ad2797c0ec2ca56ed72d3ecc",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NVAX-2026-06-30",
+      "ticker": "NVAX",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "c186a68514a4dc6891a1632e1aa44d9357ac0517479b30981d961be94753e721",
+      "history_sha256": "e6dbd85ad0bf330c81ec1f1389faedd1024ddb7d5c5cdf52d7fec6b1df114ae2",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "PVLA-2026-06-30",
+      "ticker": "PVLA",
+      "cutoff": "2026-07-31T16:00:00-04:00",
+      "prompt_sha256": "f69c145ba4bc8f800574a577757909b0234810d64df7c5299dc3769622a607c3",
+      "history_sha256": "449b6e1d434f630fcefa0fc1806faf33fb6d0a6aba5251307b3030424aa56524",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TCBX-2026-06-30",
+      "ticker": "TCBX",
+      "cutoff": "2026-07-20T16:00:00-04:00",
+      "prompt_sha256": "e580256d1b431002e93b7672828d60642bf14c92843726a536c9466b4bacc2df",
+      "history_sha256": "2600fb3657d33ef3ee8c41d6b0e4e7acc6fb31caed03bc5456782fbe3e7a7fc8",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "CCNE-2026-06-30",
+      "ticker": "CCNE",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "6a7f72fa743f7d4635d94e1103dcd165318fc61960d05b8d0a84e457b05b527f",
+      "history_sha256": "064fcc0b53b551e0149ce3bbc63b8e3304738b2a78f2103f3c989d0989173006",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "IRD-2026-06-30",
+      "ticker": "IRD",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "cb24585d857aea726af9a316fb871daf3375055ba652d8e3ed31ac2fb4a4836c",
+      "history_sha256": "ccbfccda304e94448bfbd987a4c007eae0138705f62932f6f73c244463ddda35",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "MSBI-2026-06-30",
+      "ticker": "MSBI",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "3882303f67a9095783de3736f044e3937aaac7b5df52179b8f4dbd49974eecc9",
+      "history_sha256": "5cd92b7b8e5093cd6f34426e7124c4083667bd0523143c7ddebe082b0eb9fcdd",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TH-2026-06-30",
+      "ticker": "TH",
+      "cutoff": "2026-08-06T16:00:00-04:00",
+      "prompt_sha256": "6c909c6f62c206c4c4188479b1b9e7fb6e425a64938f02b8d0f081e736f71526",
+      "history_sha256": "f77da874671e44a57a494fff79ebc40be16651c08f46251a82cfa05ee89e294d",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TFIN-2026-06-30",
+      "ticker": "TFIN",
+      "cutoff": "2026-07-17T16:00:00-04:00",
+      "prompt_sha256": "adf0cffdaa5a0b1e63cb69ed71dc953635de010b6c465c45c3e91c75c3b8f9ba",
+      "history_sha256": "2846b1fae3d256897cab92e7cd3fec01d8c60ff0dd5a11a140f13dfdf3b20b2b",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "NUVB-2026-06-30",
+      "ticker": "NUVB",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "6f7b105c6d9d3e7c86f47dd4654c515d37658cea455232fa789a01601f4ae813",
+      "history_sha256": "0d9c3921e8570945c6d2dc6a398871bf5df67042f645c36babc6a52d2393390a",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "TWFG-2026-06-30",
+      "ticker": "TWFG",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "bd8069bf46129796c440327cdeb9268240b276936ff7a0729b1d8488e6546e8f",
+      "history_sha256": "c3816183e6ba061b56f30a0d41e9970c5ca48d5bcaf27cddea9ab76a1d68ee46",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "EOSE-2026-06-30",
+      "ticker": "EOSE",
+      "cutoff": "2026-08-03T16:00:00-04:00",
+      "prompt_sha256": "9decc44e3623a0a306b4c9e2e2289b268f393a36a180ac2946688f6dc9dbdc2e",
+      "history_sha256": "e3bf41142932b32f80012f06141cdbbdea3b81fff8dcf37ef29052d9e04f9868",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SENS-2026-06-30",
+      "ticker": "SENS",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "8ebb6911c6cbacb4e7b25af31f98f963693ec2e7f78f7ac93600a119fa5f020e",
+      "history_sha256": "99f9367bfeb7703ff571b8895bdd609bc02296082b44b79c672e0ea9d293590e",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "IBCP-2026-06-30",
+      "ticker": "IBCP",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "d314a3c7661af0586f513180c61b0e69030d16e72a05697b795d7a67261a38a6",
+      "history_sha256": "dfbde6125af185bf0a28a955433bec1b36c6eb389bfec71a5305baa41d5d8b45",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "SGMT-2026-06-30",
+      "ticker": "SGMT",
+      "cutoff": "2026-08-07T16:00:00-04:00",
+      "prompt_sha256": "9eb8a757c63765e62890bfa5b3e56b334ed9bb3aabcd1e5b287ab4d7f66b5457",
+      "history_sha256": "3612743fd4af7b9a26a1685a47ce1d33bbdafde9a78758f637119cd19dce1b17",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "LADR-2026-06-30",
+      "ticker": "LADR",
+      "cutoff": "2026-07-21T16:00:00-04:00",
+      "prompt_sha256": "ee73ecb1e87db0727811ab8610184f8422f7e61741ea89d965402a19d007a742",
+      "history_sha256": "0d690fa99119e996cb7fee4f673c58c4c044ae302acd86edbbe6b08cb30f842b",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "KOD-2026-06-30",
+      "ticker": "KOD",
+      "cutoff": "2026-08-11T16:00:00-04:00",
+      "prompt_sha256": "3ebeca07ae22cab0fdc07af57da6752f3f21fd62befe5cfc5aa62045bd19aca3",
+      "history_sha256": "74d4d49e7c794741e3db4dde94775cac5347cc2cfe7006df6ed035f124d0b27c",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "KOP-2026-06-30",
+      "ticker": "KOP",
+      "cutoff": "2026-08-04T16:00:00-04:00",
+      "prompt_sha256": "885f5fea69a0f37fff2c77412eec94aa12d876490183d0c95b810f641d3c7bde",
+      "history_sha256": "2d27bc706b001023df7e263e5bbf729e57d90730a7a92bb71de0efd23e9961d0",
+      "undated_history_rows": 0
+    },
+    {
+      "case_id": "HAFC-2026-06-30",
+      "ticker": "HAFC",
+      "cutoff": "2026-07-17T16:00:00-04:00",
+      "prompt_sha256": "28b16af121d6d6549173d6ab48dff95380092d9c156d0103dae6c390c93a7fb8",
+      "history_sha256": "f6f3ab8520384b0a4a2c2a359221fb55cc7461d4ee76b85999778b2e2cd4f632",
+      "undated_history_rows": 0
+    }
+  ]
+}

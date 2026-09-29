@@ -1,0 +1,220 @@
+{
+  "status": "retrospective",
+  "cohort_cases": 200,
+  "basis": "completed_200_usable_200_company_key",
+  "rows": [
+    {
+      "harness": "Shortcut",
+      "model": "Luna",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.13155828827486274,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.015141711725137268,
+      "improvement_95pct_bootstrap": [
+        0.004969282091495936,
+        0.026892103419590616
+      ],
+      "status": "retrospective"
+    },
+    {
+      "harness": "Shortcut",
+      "model": "Sol",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.12741459758976553,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.019285402410234468,
+      "improvement_95pct_bootstrap": [
+        0.003132682201399291,
+        0.0349925574600861
+      ],
+      "status": "retrospective"
+    },
+    {
+      "harness": "Shortcut",
+      "model": "Astra",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.12034044439956919,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.026359555600430816,
+      "improvement_95pct_bootstrap": [
+        0.015130967723131243,
+        0.03992920009699026
+      ],
+      "status": "retrospective"
+    },
+    {
+      "harness": "Codex",
+      "model": "Luna",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.13216,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.014539999999999997,
+      "improvement_95pct_bootstrap": [
+        0.005347625000000001,
+        0.025650249999999996
+      ],
+      "status": "retrospective"
+    },
+    {
+      "harness": "Codex",
+      "model": "Sol",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.12583,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.020870000000000003,
+      "improvement_95pct_bootstrap": [
+        0.010369375000000004,
+        0.03392074999999999
+      ],
+      "status": "retrospective"
+    },
+    {
+      "harness": "Codex",
+      "model": "Astra",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.129015,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.017685000000000006,
+      "improvement_95pct_bootstrap": [
+        0.00625462500000001,
+        0.031186374999999995
+      ],
+      "status": "retrospective"
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "model": "Luna",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.14134,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.00536,
+      "improvement_95pct_bootstrap": [
+        -0.010031749999999997,
+        0.022052999999999986
+      ],
+      "status": "retrospective"
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "model": "Sol",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.12705,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.019649999999999997,
+      "improvement_95pct_bootstrap": [
+        0.007874999999999997,
+        0.03350624999999997
+      ],
+      "status": "retrospective"
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "model": "Astra",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.12712500000000002,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.019575,
+      "improvement_95pct_bootstrap": [
+        0.009269874999999995,
+        0.032015
+      ],
+      "status": "retrospective"
+    }
+  ],
+  "limitations": [
+    "Retrospective cutoffs and post-report consensus. exploratory, not a point-in-time leaderboard.",
+    "Selected forecasts include audited retries. execution timing and repair paths varied among configurations."
+  ],
+  "paired_vs_shortcut_astra": [
+    {
+      "other_harness": "Shortcut",
+      "other_model": "Luna",
+      "other_mae_minus_shortcut_astra_mae": 0.01121784387529355,
+      "ci_95pct_bootstrap": [
+        0.004973745563021472,
+        0.018390476834097655
+      ]
+    },
+    {
+      "other_harness": "Shortcut",
+      "other_model": "Sol",
+      "other_mae_minus_shortcut_astra_mae": 0.0070741531901963505,
+      "ci_95pct_bootstrap": [
+        -0.006696735344774532,
+        0.02645735046042186
+      ]
+    },
+    {
+      "other_harness": "Codex",
+      "other_model": "Luna",
+      "other_mae_minus_shortcut_astra_mae": 0.01181955560043082,
+      "ci_95pct_bootstrap": [
+        0.005736612081233792,
+        0.018437663441983783
+      ]
+    },
+    {
+      "other_harness": "Codex",
+      "other_model": "Sol",
+      "other_mae_minus_shortcut_astra_mae": 0.005489555600430818,
+      "ci_95pct_bootstrap": [
+        0.00030505633414340565,
+        0.010903368082730906
+      ]
+    },
+    {
+      "other_harness": "Codex",
+      "other_model": "Astra",
+      "other_mae_minus_shortcut_astra_mae": 0.008674555600430811,
+      "ci_95pct_bootstrap": [
+        0.003783044663665376,
+        0.014079753665142967
+      ]
+    },
+    {
+      "other_harness": "Codex + GPT Researcher",
+      "other_model": "Luna",
+      "other_mae_minus_shortcut_astra_mae": 0.020999555600430816,
+      "ci_95pct_bootstrap": [
+        0.00776460460178203,
+        0.035206752405312666
+      ]
+    },
+    {
+      "other_harness": "Codex + GPT Researcher",
+      "other_model": "Sol",
+      "other_mae_minus_shortcut_astra_mae": 0.006709555600430819,
+      "ci_95pct_bootstrap": [
+        -0.0021026722139796815,
+        0.01525324792376247
+      ]
+    },
+    {
+      "other_harness": "Codex + GPT Researcher",
+      "other_model": "Astra",
+      "other_mae_minus_shortcut_astra_mae": 0.006784555600430817,
+      "ci_95pct_bootstrap": [
+        0.0017899596833565617,
+        0.01232618054209554
+      ]
+    }
+  ]
+}

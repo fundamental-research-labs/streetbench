@@ -1,0 +1,16 @@
+{
+  "source_revision": "d48e1d5",
+  "files": {
+    "harnesses/common.py": "8bcad9a45af741b3beb6cf79d644104a692f284b0997f4508dbf7acfd478a065",
+    "harnesses/consensus.py": "2a2e2b0b1bffdfc033c7670865ee4e5849219beff5e85cea2cadb26b9fb995b9",
+    "harnesses/codex_cli.py": "e1a11027e8856e6f9a89b8ac7ba1b41cb02809a13e38fc515083a85a386f6268",
+    "harnesses/codex_gpt_researcher.py": "9abc6637f7f4ce14be60f758330de1379d267a5c87eddc918ff746f031037bd1",
+    "scripts/asof_mcp.py": "a98ad5009f66c6c3afede6df740d90464fd947fb1eb4f163d787251d67f11396",
+    "scripts/asof_query.py": "eb1506c95786560ded3692a2a5b4b1cb135b526d2852c0e9fcd2d4b086738446",
+    "scripts/check_cutoff.py": "2d6b7fa0750c256708c1246b023c6deb19a9c2a6dcf1767cbbf2ab0723391f15",
+    "scripts/import_external_forecasts.py": "34964bb475d1eff39242b4ee2d4a56d8791106f0182c97691cb7af2b8d7c0dd9",
+    "scripts/run_harness.py": "9fdbb630116b52aa9c239b9fadc3b568b7833dd8c316c8ebec88dff21407a34e",
+    "scripts/tests/test_gpt_researcher_snapshot_boundary.py": "40ad5423357a903f02ea4bb67b6003503a6ae2709f244ad5bb01922d03ccbe18",
+    "scripts/prepare_gpt_researcher_pilot.py": "5ce0be4172fa42f07061553f30e0eadfa80a8c457859bba6a3ca01afa37e1964"
+  }
+}

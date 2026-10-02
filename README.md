@@ -36,6 +36,26 @@ Each bar shows the reduction in mean absolute error, or MAE, against the Street.
 
 MAE is the average of `|forecast EPS − reported EPS|` in USD per share. Error reduction compares each MAE with the Street's MAE on those same reports. The [machine-readable scores](results/scores.json) retain the underlying precision.
 
+### Newer models in Shortcut
+
+After the nine-configuration release we ran two newer models in Shortcut on the same 200 cases, both at high effort. **Opus 5.5 reduced average EPS error by 23.3%**, averaging **$0.1125 per share**. Sol 6.1 reduced it by 19.3%.
+
+![EPS error reduction for five models in Shortcut](graphs/shortcut-models.png)
+
+| Model in Shortcut | Forecasts | EPS MAE | Error reduction vs Street |
+| --- | ---: | ---: | ---: |
+| Luna high | 200/200 | $0.1316 | 10.3% |
+| Sol high | 200/200 | $0.1274 | 13.1% |
+| Astra high | 200/200 | $0.1203 | 18.0% |
+| Sol 6.1 high | 198/200 | $0.1184 | 19.3% |
+| Opus 5.5 high | 200/200 | **$0.1125** | **23.3%** |
+
+Opus 5.5 was closer than Astra on 115 of the 200 companies. Sol 6.1's edge over Astra is small next to the case-to-case variation, so we read those two as level.
+
+![EPS error reduction across the nine released configurations and the two newer Shortcut models](graphs/all-configurations.png)
+
+Read the newer rows with three caveats. Sol 6.1 has 198 usable forecasts: two cases were flagged for target-results exposure on every attempt and are scored at Street consensus. Both runs used a later Shortcut runtime setup and models with later knowledge cutoffs than the released ones. The release's evidence audit has not been repeated for them. The [newer-model scores](results/newer-models.json) hold the underlying numbers, and [this script](scripts/render_newer_models.py) rebuilds both graphs.
+
 ## What we found
 
 ![Companies where each configuration was closer to reported EPS than the Street](graphs/paired-outcomes.png)

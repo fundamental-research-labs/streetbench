@@ -1,0 +1,55 @@
+{
+  "status": "retrospective",
+  "added_utc": "2026-10-01",
+  "cohort_cases": 200,
+  "basis": "Same 200 frozen cases, answer key and scoring method as results/scores.json. A case without a usable forecast is scored at the final Street consensus, contributing zero improvement.",
+  "rows": [
+    {
+      "harness": "Shortcut",
+      "model": "Sol 6.1",
+      "model_id": "gpt-6.1-sol",
+      "effort": "high",
+      "cases": 200,
+      "valid": 198,
+      "failures": 2,
+      "model_mae": 0.11838420948022792,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.028315790519772087,
+      "improvement_95pct_bootstrap": [
+        0.01692039864365494,
+        0.04175349751192111
+      ],
+      "closer_than_street": 122,
+      "same_absolute_error": 2,
+      "farther_than_street": 76,
+      "status": "retrospective",
+      "note": "198 usable forecasts. Two cases were flagged for target-results exposure on all three attempts and are scored at Street consensus."
+    },
+    {
+      "harness": "Shortcut",
+      "model": "Opus 5.5",
+      "model_id": "claude-opus-5-5",
+      "effort": "high",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.11253450000000001,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.034165499999999994,
+      "improvement_95pct_bootstrap": [
+        0.0208148875,
+        0.04875387499999996
+      ],
+      "closer_than_street": 126,
+      "same_absolute_error": 19,
+      "farther_than_street": 55,
+      "status": "retrospective"
+    }
+  ],
+  "limitations": [
+    "Added after the nine-configuration release. The release evidence audit in results/snapshot-evidence-audit.json has not been repeated for these two runs.",
+    "Run with a later Shortcut runtime setup than the released Shortcut rows, so differences reflect the setup as well as the model.",
+    "Knowledge cutoffs for these two models are later than the released models' (reported as June 2026) and have not been checked against provider documentation.",
+    "Retrospective cutoffs and post-report consensus. exploratory, not a point-in-time leaderboard."
+  ]
+}

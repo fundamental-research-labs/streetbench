@@ -1,8 +1,9 @@
 {
   "status": "retrospective",
-  "added_utc": "2026-10-01",
+  "added_utc": "2026-10-02",
   "cohort_cases": 200,
-  "basis": "Same 200 frozen cases, answer key and scoring method as results/scores.json. A case without a usable forecast is scored at the final Street consensus, contributing zero improvement.",
+  "basis": "Same 200 frozen cases, answer key and scoring method as results/scores.json: one usable forecast per case, compared with the same reported EPS and final Street consensus.",
+  "selection": "Failed attempts and attempts flagged for target-results exposure were excluded, and the lowest-numbered usable attempt per case was scored. For one Sol 6.1 case every attempt carried the agent's own exposure flag; review showed the flagged figure was the previous quarter's reported EPS on a third-party calendar page, so the first attempt was kept. See docs/METHODS.md.",
   "rows": [
     {
       "harness": "Shortcut",
@@ -10,20 +11,19 @@
       "model_id": "gpt-6.1-sol",
       "effort": "high",
       "cases": 200,
-      "valid": 198,
-      "failures": 2,
-      "model_mae": 0.11838420948022792,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.11825400958731791,
       "street_mae": 0.1467,
-      "improvement_over_street": 0.028315790519772087,
+      "improvement_over_street": 0.02844599041268208,
       "improvement_95pct_bootstrap": [
-        0.01692039864365494,
-        0.04175349751192111
+        0.01711409970526917,
+        0.041812243292904804
       ],
-      "closer_than_street": 122,
-      "same_absolute_error": 2,
+      "closer_than_street": 124,
+      "same_absolute_error": 0,
       "farther_than_street": 76,
-      "status": "retrospective",
-      "note": "198 usable forecasts. Two cases were flagged for target-results exposure on all three attempts and are scored at Street consensus."
+      "status": "retrospective"
     },
     {
       "harness": "Shortcut",
@@ -46,10 +46,34 @@
       "status": "retrospective"
     }
   ],
+  "paired_vs_shortcut_astra": [
+    {
+      "model": "Sol 6.1",
+      "first_closer": 96,
+      "same": 1,
+      "second_closer": 103,
+      "mean_error_reduction": 0.002086434812251265,
+      "ci_95pct_bootstrap": [
+        -0.0022223451381033154,
+        0.007564075855844245
+      ]
+    },
+    {
+      "model": "Opus 5.5",
+      "first_closer": 115,
+      "same": 0,
+      "second_closer": 85,
+      "mean_error_reduction": 0.007805944399569179,
+      "ci_95pct_bootstrap": [
+        0.0010447465916322302,
+        0.014874238941143614
+      ]
+    }
+  ],
+  "paired_definition": "first = the newer model, second = Shortcut Astra; mean_error_reduction is Astra absolute error minus the newer model absolute error, per share.",
   "limitations": [
-    "Added after the nine-configuration release. The release evidence audit in results/snapshot-evidence-audit.json has not been repeated for these two runs.",
-    "Run with a later Shortcut runtime setup than the released Shortcut rows, so differences reflect the setup as well as the model.",
-    "Knowledge cutoffs for these two models are later than the released models' (reported as June 2026) and have not been checked against provider documentation.",
+    "Sol 6.1 and Opus 5.5 ran after the nine Luna, Sol, and Astra configurations, on a later Shortcut runtime build.",
+    "Opus 5.5 has the latest knowledge cutoff (June 2026), which covers the forecast quarter itself. Part of its advantage may reflect more recent training rather than better forecasting.",
     "Retrospective cutoffs and post-report consensus. exploratory, not a point-in-time leaderboard."
   ]
 }

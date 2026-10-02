@@ -25,6 +25,14 @@ def main():
         raise ValueError('Current scores need nine distinct configurations')
     if any(row['cases'] != 200 or row['valid'] != 200 or row['failures'] != 0 for row in rows):
         raise ValueError('Current coverage differs from the completed 200-case release')
+    newer = json.loads((ROOT / 'results/newer-models.json').read_text())['rows']
+    if ({(row['harness'], row['model']) for row in newer} != {('Shortcut', 'Sol 6.1'), ('Shortcut', 'Opus 5.5')}
+            or len(newer) != 2
+            or any(row['cases'] != 200 or row['valid'] != 200 or row['failures'] != 0
+                   or abs(row['street_mae'] - rows[0]['street_mae']) > 1e-12
+                   or row['closer_than_street'] + row['same_absolute_error'] + row['farther_than_street'] != 200
+                   for row in newer)):
+        raise ValueError('Newer Shortcut scores differ from the completed 200-case basis')
     if diagnostics['cohort_cases'] != 200 or diagnostics['answer_key_sha256'] != manifest['answer_key_sha256']:
         raise ValueError('Case diagnostics differ from the frozen score key')
     scored = {(row['harness'], row['model']): row for row in rows}
@@ -77,7 +85,7 @@ def main():
         reader = csv.DictReader(handle)
         if reader.fieldnames != ['case_id', 'actual_eps', 'consensus_eps'] or [row['case_id'] for row in reader] != [row['case_id'] for row in challenge]:
             raise ValueError('Local answer template does not match the frozen case list')
-    print('Release verified: nine 200/200 scores, 200 frozen challenge cases, Snapshot audit and artifact hashes match.')
+    print('Release verified: nine 200/200 scores plus two newer Shortcut models, 200 frozen challenge cases, Snapshot audit and artifact hashes match.')
 
 
 if __name__ == '__main__':

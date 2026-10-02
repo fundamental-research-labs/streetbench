@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the comparisons that add Sol 6.1 and Opus 5.5, from aggregate scores only."""
+"""Render the eleven-configuration and five-model Shortcut comparisons from aggregate scores only."""
 import json
 from pathlib import Path
 
@@ -17,8 +17,8 @@ RELEASED_MODELS = ("Luna", "Sol", "Astra")
 NEWER_MODELS = ("Sol 6.1", "Opus 5.5")
 # Inches, matching scripts/render_results.py (11.4 x 6.8 figure with eleven bar slots).
 WIDTH, SLOT, TOP, BOTTOM = 11.4, 0.371, 1.43, 1.29
-FOOTER = ("Exploratory retrospective comparison. Street consensus MAE: $0.1467/share.\n"
-          "Sol 6.1 has 198 usable forecasts; its two flagged cases are scored at Street consensus.")
+SUBTITLE = "Same 200 companies and answer key · 200 usable forecasts per configuration"
+FOOTER = "Exploratory retrospective comparison. Street consensus MAE: $0.1467/share."
 
 
 def load():
@@ -29,12 +29,13 @@ def load():
                 | {("Shortcut", model) for model in NEWER_MODELS})
     if set(by_key) != expected or len(by_key) != len(released) + len(newer):
         raise ValueError("Expected the nine released configurations plus two newer Shortcut models")
-    if any(row["cases"] != 200 or abs(row["street_mae"] - 0.1467) > 1e-12 for row in by_key.values()):
-        raise ValueError("Every score must use the same 200 cases and Street baseline")
+    if any(row["cases"] != 200 or row["valid"] != 200 or abs(row["street_mae"] - 0.1467) > 1e-12
+           for row in by_key.values()):
+        raise ValueError("Every score must use 200 usable forecasts and the same Street baseline")
     return by_key
 
 
-def render(by_key, groups, name, title, subtitle):
+def render(by_key, groups, name, title):
     slots = sum(len(models) for _, models in groups) + len(groups) - 1
     height = TOP + BOTTOM + SLOT * slots
     fig, ax = plt.subplots(figsize=(WIDTH, height))
@@ -76,8 +77,8 @@ def render(by_key, groups, name, title, subtitle):
 
     fig.text(0.055, 1 - 0.41 / height, title,
              fontsize=17, fontweight="bold", color="#15233a")
-    fig.text(0.055, 1 - 0.75 / height, subtitle, fontsize=10, color="#5a687e")
-    fig.text(0.055, 0.30 / height, FOOTER, fontsize=9, color="#5a687e", linespacing=1.5)
+    fig.text(0.055, 1 - 0.75 / height, SUBTITLE, fontsize=10, color="#5a687e")
+    fig.text(0.055, 0.51 / height, FOOTER, fontsize=9, color="#5a687e")
 
     for extension in ("png", "svg"):
         path = ROOT / f"graphs/{name}.{extension}"
@@ -92,13 +93,11 @@ def render(by_key, groups, name, title, subtitle):
 
 def main():
     by_key = load()
-    render(by_key, [("Shortcut", RELEASED_MODELS + NEWER_MODELS)], "shortcut-models",
-           "EPS accuracy across five models in Shortcut",
-           "Same 200 companies and answer key · Sol 6.1 and Opus 5.5 added after the nine-configuration release")
     render(by_key, [("Shortcut", RELEASED_MODELS + NEWER_MODELS), ("Codex", RELEASED_MODELS),
                     ("Codex + GPT Researcher", RELEASED_MODELS)], "all-configurations",
-           "EPS accuracy across eleven agent configurations",
-           "Same 200 companies and answer key · the nine released configurations plus two newer models in Shortcut")
+           "EPS accuracy across eleven agent configurations")
+    render(by_key, [("Shortcut", RELEASED_MODELS + NEWER_MODELS)], "shortcut-models",
+           "EPS accuracy across five models in Shortcut")
 
 
 if __name__ == "__main__":

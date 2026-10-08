@@ -32,15 +32,16 @@ def main() -> None:
     parser.add_argument("--timeout", type=int, default=900)
     parser.add_argument("--documents", type=Path, help="enables archived as-of MCP tools")
     parser.add_argument("--snapshot-config", type=Path, help="enables Exa Snapshot search/read via MCP")
+    parser.add_argument("--rewind-config", type=Path, help="enables Linkup Rewind search/read via MCP")
     args = parser.parse_args()
-    if args.documents and args.snapshot_config:
-        parser.error("choose only one of --documents or --snapshot-config")
+    if sum(bool(source) for source in (args.documents, args.snapshot_config, args.rewind_config)) > 1:
+        parser.error("choose only one of --documents, --snapshot-config or --rewind-config")
     task = json.load(sys.stdin)
     with tempfile.TemporaryDirectory(prefix="streetbench-codex-") as directory:
         root = Path(directory)
         (root / "task.json").write_text(json.dumps(task, indent=2))
         (root / "schema.json").write_text(json.dumps(SCHEMA))
-        tool_mode = bool(args.documents or args.snapshot_config)
+        tool_mode = bool(args.documents or args.snapshot_config or args.rewind_config)
         prompt = forecast_prompt(task, asof_tools=tool_mode)
         command = ["codex", "exec", "--json", "--ephemeral", "--ignore-user-config",
                    "--skip-git-repo-check", "--sandbox", "read-only",
@@ -55,8 +56,12 @@ def main() -> None:
                 raise SystemExit("as-of mode requires a frozen cutoff_iso")
             server = Path(__file__).resolve().parents[1] / "scripts/asof_mcp.py"
             mcp_args = [str(server), "--task", str(root / "task.json")]
-            mcp_args += (["--snapshot-config", str(args.snapshot_config.resolve())] if args.snapshot_config else
-                         ["--documents", str(args.documents.resolve())])
+            if args.snapshot_config:
+                mcp_args += ["--snapshot-config", str(args.snapshot_config.resolve())]
+            elif args.rewind_config:
+                mcp_args += ["--rewind-config", str(args.rewind_config.resolve())]
+            else:
+                mcp_args += ["--documents", str(args.documents.resolve())]
             command += ["-c", 'mcp_servers.streetbench.command="python3"',
                         "-c", "mcp_servers.streetbench.args=" + json.dumps(mcp_args)]
         command.append("-")

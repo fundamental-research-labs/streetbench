@@ -27,16 +27,26 @@ def main() -> None:
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--documents", type=Path)
     source.add_argument("--snapshot-config", type=Path)
+    source.add_argument("--rewind-config", type=Path)
     parser.add_argument("--prefetch-limit", type=int, default=0,
-                        help="for research agents, read top Snapshot hits before returning search")
+                        help="for research agents, read top Snapshot or Rewind hits before returning search")
     args = parser.parse_args()
     if args.prefetch_limit < 0 or args.prefetch_limit > 3:
         parser.error("prefetch-limit must be 0..3")
-    if args.prefetch_limit and not args.snapshot_config:
-        parser.error("prefetch requires Exa Snapshot")
-    query_script = Path(__file__).with_name("exa_snapshot_query.py" if args.snapshot_config else "asof_query.py")
-    source_args = (["--snapshot-config", str(args.snapshot_config)] if args.snapshot_config else
-                   ["--documents", str(args.documents)])
+    if args.prefetch_limit and not (args.snapshot_config or args.rewind_config):
+        parser.error("prefetch requires Exa Snapshot or Linkup Rewind")
+    if args.snapshot_config:
+        query_script = Path(__file__).with_name("exa_snapshot_query.py")
+        source_args = ["--snapshot-config", str(args.snapshot_config)]
+        provider = "Snapshot"
+    elif args.rewind_config:
+        query_script = Path(__file__).with_name("rewind_query.py")
+        source_args = ["--rewind-config", str(args.rewind_config)]
+        provider = "Rewind"
+    else:
+        query_script = Path(__file__).with_name("asof_query.py")
+        source_args = ["--documents", str(args.documents)]
+        provider = "archive"
     for line in sys.stdin:
         try:
             request = json.loads(line)
@@ -69,7 +79,7 @@ def main() -> None:
                         read = subprocess.run([*base, "read", hit["doc_id"]], capture_output=True,
                                               text=True, timeout=60)
                         if read.returncode:
-                            raise ValueError("Snapshot historical page read failed: " + read.stderr.strip())
+                            raise ValueError(f"{provider} historical page read failed: " + read.stderr.strip())
                         page = json.loads(read.stdout)
                         hit["historical_text"] = page["text"][:12000]
                         hit["historical_text_sha256"] = page["text_sha256"]

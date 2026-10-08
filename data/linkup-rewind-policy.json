@@ -1,0 +1,35 @@
+{
+  "policy_id": "streetbench-linkup-rewind-v1",
+  "provider": "Linkup Rewind",
+  "provider_documentation": "https://docs.linkup.so",
+  "case_count": 200,
+  "cutoff_field": "data/cases.jsonl:cutoff_iso",
+  "cutoff_instruction": "Use each case's exact timezone-aware timestamp. Rewind is day-granular, so asOf is the last full UTC day before the cutoff.",
+  "search": {
+    "endpoint": "POST https://api.linkup.so/v1/rewind/search",
+    "body": {
+      "q": "<query>",
+      "asOf": "<UTC date before case cutoff_iso>"
+    },
+    "note": "Matching and ranking use only pages crawled by the end of asOf."
+  },
+  "fetch": {
+    "endpoint": "POST https://api.linkup.so/v1/rewind/fetch",
+    "body": {
+      "url": "<one HTTP(S) URL returned by search>",
+      "asOf": "<same asOf>"
+    }
+  },
+  "admission": {
+    "no_live_web_fallback": true,
+    "reject_revisions_valid_after_as_of": true,
+    "exclude_attempts_that_saw_target_results_headlines_or_reported_values": true,
+    "historical_search_ranking_guaranteed": true,
+    "provider_capture_timestamp_exposed": true
+  },
+  "not_released": [
+    "credentials or account identity",
+    "historical numeric financial inputs",
+    "archived page bodies and raw trajectories"
+  ]
+}

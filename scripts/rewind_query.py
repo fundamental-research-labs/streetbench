@@ -1,0 +1,204 @@
+#!/usr/bin/env python3
+"""Case-scoped Linkup Rewind search/read with a fixed cutoff and HTTP budget.
+
+Rewind answers "as of the end of a UTC day": both the matching pages and their
+ranking are computed only from what was crawled by then. A case cutoff usually
+falls mid-day, so requests use the last full UTC day before the cutoff. That
+gives up the cutoff day's partial hours but never admits same-day pages.
+
+The config stays on the host. This is a research adapter, not an OS sandbox or
+independent proof of a provider's crawl timestamp.
+"""
+from __future__ import annotations
+
+import argparse
+import fcntl
+import hashlib
+import json
+import os
+import re
+import urllib.error
+import urllib.parse
+import urllib.request
+import uuid
+from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
+
+
+API = "https://api.linkup.so/v1/rewind/"
+
+
+def instant(value: str) -> datetime:
+    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    if parsed.tzinfo is None:
+        raise ValueError("cutoff must include a time zone")
+    return parsed.astimezone(timezone.utc)
+
+
+def as_of_day(cutoff: datetime) -> str:
+    return (cutoff.date() - timedelta(days=1)).isoformat()
+
+
+def sha256(value: str) -> str:
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
+def read_key(config: dict) -> str:
+    if config.get("key_path"):
+        key = Path(config["key_path"]).expanduser().resolve().read_text().strip()
+    else:
+        key = os.environ.get("LINKUP_API_KEY", "").strip()
+    if not key:
+        raise ValueError("Rewind key is missing: set key_path in the config or LINKUP_API_KEY")
+    expected = config.get("verified_key_sha256")
+    if expected and sha256(key) != expected:
+        raise ValueError("Rewind key does not match the verified key fingerprint")
+    return key
+
+
+def validate(config: dict, task: dict) -> tuple[str, str, Path]:
+    if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", str(task.get("case_id", ""))):
+        raise ValueError("invalid case ID")
+    cutoff = task.get("cutoff_iso")
+    if not cutoff or instant(cutoff) > datetime.now(timezone.utc):
+        raise ValueError("case needs a past, timezone-aware cutoff_iso")
+    if task.get("verification_status") != "verified" and not config.get("allow_unverified_case", False):
+        raise ValueError("case eligibility is not verified; set allow_unverified_case only for an exploratory run")
+    key = read_key(config)
+    limit = int(config.get("max_http_attempts", 0))
+    per_case = int(config.get("max_case_http_attempts", 0))
+    if not 0 < limit <= 100000 or not 0 < per_case <= limit:
+        raise ValueError("positive total and per-case HTTP budgets are required")
+    evidence_dir = Path(config["evidence_dir"]).expanduser().resolve()
+    evidence_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
+    return cutoff, key, evidence_dir
+
+
+def reserve(evidence_dir: Path, case_id: str, total_limit: int, case_limit: int, endpoint: str) -> None:
+    lock_path = evidence_dir / "budget.lock"
+    with lock_path.open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        log_path = evidence_dir / "http-attempts.jsonl"
+        rows = [json.loads(line) for line in log_path.read_text().splitlines()] if log_path.exists() else []
+        if len(rows) >= total_limit or sum(row["case_id"] == case_id for row in rows) >= case_limit:
+            raise ValueError("Rewind HTTP budget exhausted")
+        with log_path.open("a") as log:
+            log.write(json.dumps({"at": datetime.now(timezone.utc).isoformat(),
+                                  "case_id": case_id, "endpoint": endpoint}) + "\n")
+            log.flush()
+            os.fsync(log.fileno())
+
+
+def request_rewind(endpoint: str, payload: dict, key: str) -> dict:
+    request = urllib.request.Request(
+        API + endpoint, data=json.dumps(payload).encode("utf-8"),
+        headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"},
+        method="POST")
+    try:
+        with urllib.request.urlopen(request, timeout=40) as response:
+            data = json.load(response)
+            if not isinstance(data, dict):
+                raise ValueError("Rewind response is not an object")
+            return data
+    except urllib.error.HTTPError as exc:
+        if endpoint == "fetch" and exc.code == 404:
+            return {}
+        raise ValueError(f"Rewind HTTP {exc.code}") from None
+    except (urllib.error.URLError, TimeoutError) as exc:
+        raise ValueError("Rewind transport unavailable") from exc
+
+
+def admitted(revisions: list, as_of: str) -> list[dict]:
+    day = date.fromisoformat(as_of)
+    docs = []
+    for row in revisions:
+        if not isinstance(row, dict) or not row.get("url") or not row.get("content"):
+            continue
+        try:
+            if date.fromisoformat(row["validFrom"]) > day:
+                continue
+        except (KeyError, TypeError, ValueError):
+            continue
+        docs.append(row)
+    return docs
+
+
+def record(evidence_dir: Path, task: dict, endpoint: str, payload: dict, docs: list[dict]) -> None:
+    case_dir = evidence_dir / task["case_id"]
+    case_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
+    artifact = {
+        "case_id": task["case_id"], "cutoff_iso": task["cutoff_iso"], "as_of": payload["asOf"],
+        "retrieved_at": datetime.now(timezone.utc).isoformat(),
+        "provider": "linkup-rewind", "provider_asof_guarantee": True,
+        "historical_search_ranking": True, "endpoint": endpoint,
+        "request_sha256": sha256(json.dumps(payload, sort_keys=True)),
+        "documents": [{"url": doc["url"], "title": doc.get("name"),
+                       "valid_from": doc.get("validFrom"), "valid_to": doc.get("validTo"),
+                       "text": doc["content"], "text_sha256": sha256(doc["content"])} for doc in docs],
+    }
+    path = case_dir / (uuid.uuid4().hex + ".json")
+    with path.open("x") as handle:
+        os.fchmod(handle.fileno(), 0o600)
+        json.dump(artifact, handle, sort_keys=True)
+        handle.write("\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
+def run(task: dict, config: dict, action: str, value: str) -> dict:
+    cutoff_text, key, evidence_dir = validate(config, task)
+    as_of = as_of_day(instant(cutoff_text))
+    if action == "search":
+        if not value.strip() or len(value) > 4000:
+            raise ValueError("search query must contain 1..4000 characters")
+        endpoint = "search"
+        payload = {"q": value, "asOf": as_of}
+    else:
+        url = urllib.parse.urlparse(value)
+        if url.scheme not in ("http", "https") or not url.netloc or len(value) > 4000:
+            raise ValueError("read requires an HTTP(S) URL returned by search")
+        endpoint = "fetch"
+        payload = {"url": value, "asOf": as_of}
+    reserve(evidence_dir, task["case_id"], int(config["max_http_attempts"]),
+            int(config["max_case_http_attempts"]), endpoint)
+    response = request_rewind(endpoint, payload, key)
+    rows = response.get("results", []) if action == "search" else ([response] if response else [])
+    if not isinstance(rows, list):
+        raise ValueError("Rewind response has no results array")
+    docs = admitted(rows, as_of)[:int(config.get("num_results", 5))]
+    record(evidence_dir, task, endpoint, payload, docs)
+    if action == "search":
+        return {"cutoff_iso": cutoff_text, "as_of": as_of, "provider": "linkup-rewind",
+                "ranking_is_historical": True,
+                "hits": [{"doc_id": doc["url"], "title": doc.get("name"),
+                          "source_url": doc["url"], "published_at": None,
+                          "captured_on": doc.get("validFrom"),
+                          "snippet": doc["content"][:500]} for doc in docs]}
+    if len(docs) != 1 or docs[0]["url"] != value:
+        raise ValueError("document unavailable in Rewind at cutoff")
+    doc = docs[0]
+    return {"doc_id": value, "title": doc.get("name"), "source_url": value,
+            "published_at": None, "captured_on": doc.get("validFrom"),
+            "cutoff_iso": cutoff_text, "as_of": as_of,
+            "text_sha256": sha256(doc["content"]), "text": doc["content"][:30000]}
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--task", type=Path, required=True)
+    parser.add_argument("--rewind-config", type=Path, required=True)
+    actions = parser.add_subparsers(dest="action", required=True)
+    actions.add_parser("search").add_argument("query")
+    actions.add_parser("read").add_argument("doc_id")
+    args = parser.parse_args()
+    try:
+        task = json.loads(args.task.read_text())
+        config = json.loads(args.rewind_config.read_text())
+        value = args.query if args.action == "search" else args.doc_id
+        print(json.dumps(run(task, config, args.action, value), sort_keys=True))
+    except (KeyError, ValueError, OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(str(exc)) from None
+
+
+if __name__ == "__main__":
+    main()

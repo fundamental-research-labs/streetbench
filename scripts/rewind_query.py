@@ -44,12 +44,13 @@ def sha256(value: str) -> str:
 
 
 def read_key(config: dict) -> str:
+    """Return the Linkup key, or "" to use Rewind's shared, rate-limited keyless tier."""
     if config.get("key_path"):
         key = Path(config["key_path"]).expanduser().resolve().read_text().strip()
+        if not key:
+            raise ValueError("Rewind key file is empty")
     else:
         key = os.environ.get("LINKUP_API_KEY", "").strip()
-    if not key:
-        raise ValueError("Rewind key is missing: set key_path in the config or LINKUP_API_KEY")
     expected = config.get("verified_key_sha256")
     if expected and sha256(key) != expected:
         raise ValueError("Rewind key does not match the verified key fingerprint")
@@ -90,10 +91,11 @@ def reserve(evidence_dir: Path, case_id: str, total_limit: int, case_limit: int,
 
 
 def request_rewind(endpoint: str, payload: dict, key: str) -> dict:
+    headers = {"Content-Type": "application/json"}
+    if key:
+        headers["Authorization"] = "Bearer " + key
     request = urllib.request.Request(
-        API + endpoint, data=json.dumps(payload).encode("utf-8"),
-        headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"},
-        method="POST")
+        API + endpoint, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=40) as response:
             data = json.load(response)

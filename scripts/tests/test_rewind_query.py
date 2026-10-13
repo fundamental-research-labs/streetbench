@@ -1,5 +1,7 @@
 import hashlib
+import io
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -62,6 +64,16 @@ class RewindQueryTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "not verified"):
                 rewind.run(task, {}, "search", "outlook")
             request.assert_not_called()
+
+    def test_keyless_request_sends_no_authorization(self):
+        with tempfile.TemporaryDirectory() as directory:
+            config = fixture_config(Path(directory))
+            del config["key_path"], config["verified_key_sha256"]
+            response = io.BytesIO(json.dumps({"asOf": "2026-06-30", "results": []}).encode())
+            with patch.dict(os.environ, {}, clear=True), \
+                    patch.object(rewind.urllib.request, "urlopen", return_value=response) as urlopen:
+                rewind.run(self.task, config, "search", "outlook")
+            self.assertIsNone(urlopen.call_args.args[0].get_header("Authorization"))
 
     def test_wrong_key_fails_before_http(self):
         with tempfile.TemporaryDirectory() as directory:

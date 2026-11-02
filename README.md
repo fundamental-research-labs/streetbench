@@ -87,6 +87,7 @@ The original historical numbers, archived pages, and answer values are not redis
 | Run and score your own forecasts | [Challenge guide](CHALLENGE.md) and [scorer](scripts/challenge.py) |
 | Inspect the eleven results | [Scores](results/scores.json), [Sol 6.1 and Opus 5.5 scores](results/newer-models.json), and [case comparisons](results/diagnostics.json) |
 | Review evidence checks and limitations | [Methods](docs/METHODS.md) and [Snapshot audit](results/snapshot-evidence-audit.json) |
+| See every setup side by side and the skill changes we tested | [Appendix](docs/APPENDIX.md) |
 | Rebuild the figures or verify the release | [Result graph script](scripts/render_newer_models.py), [nine-run graph script](scripts/render_results.py), [case graph script](scripts/render_diagnostics.py), and [release verifier](scripts/verify_release.py) |
 
 To check this release locally, run `python3 -m unittest discover -s scripts/tests` and `python3 scripts/verify_release.py`. The graphs can be regenerated with the pinned dependency in [requirements-graphs.txt](requirements-graphs.txt).

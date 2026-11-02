@@ -13,12 +13,13 @@
     ".gitignore": "119dfda3b589c519a3aa5afbd7bbb445b2e12cf9d68dcc1366e49ccc76f3b61e",
     "BENCHMARK_SPEC.md": "177873f4fd285a343e38039b0c6a1afa0302c7585f82aa6db6f5971fe1e5a2d7",
     "CHALLENGE.md": "40c0eec34e26d8a58990911ea7746d7fbc9abb080732d23564d799efaaddbe08",
-    "README.md": "5a8b7e4d7f992e80b910975840d91debc0cfdc916fdc8e152029fb28a160863a",
+    "README.md": "ca74a63985fdaf95c74b6c5b80d343a3a440398fcdc097af4d3adfca9feb1bfe",
     "data/README.md": "7b60bb41720b632b91022fd353cd683c67fe1350dc4531d295f75b9291e7da9f",
     "data/answers-template.csv": "240af1f3cf12d974450061ea0a52668cd7d0486efc8cd97ad576b062dc133733",
     "data/cases.jsonl": "18758fd6c70738441b4d3812be6f5a0b1e4a4d008d1d46decb0d3a0c980eb6c7",
     "data/exa-snapshot-policy.json": "9a148d519c4f3eb0d5b5643432a5ed6ab6b1bd06c0ba7076a33181e60065ffe3",
     "data/submission-template.csv": "59f1a4ba7c493941b57b069909f9ae1a6b01b13a00dbdec45a8457fc54f92191",
+    "docs/APPENDIX.md": "66f5f120866548d179815e792b620d4c55ec8657e027d3c3893f896c73370407",
     "docs/BENCHMARK_LANDSCAPE.md": "a987558d3ff563aa2b957ef8fc9d2a38de18de7005b04de6f42905c87569b776",
     "docs/METHODS.md": "d35768dbad74307684b4d7737646ed34d3ac63aa0704011213627e4171175fc9",
     "docs/SETUP.md": "041ed9ed8622d0d1699108ab8e6a9342bbc98aee8db7f1b7be1f9414461dfbec",
@@ -66,6 +67,11 @@
       "scores": "results/newer-models.json",
       "score_configurations": 2,
       "description": "Sol 6.1 and Opus 5.5 in Shortcut on the same 200 frozen cases and answer key."
+    },
+    {
+      "added_utc": "2026-11-02",
+      "docs": "docs/APPENDIX.md",
+      "description": "Supporting tables for the eleven configurations and the forecasting skill changes tested. No new scores or case-level data."
     }
   ]
 }

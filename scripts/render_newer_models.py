@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the eleven-configuration and five-model Shortcut comparisons from aggregate scores only."""
+"""Render the thirteen-configuration and five-model Shortcut comparisons from aggregate scores only."""
 import json
 from pathlib import Path
 
@@ -25,10 +25,10 @@ def load():
     released = json.loads((ROOT / "results/scores.json").read_text())["rows"]
     newer = json.loads((ROOT / "results/newer-models.json").read_text())["rows"]
     by_key = {(row["harness"], row["model"]): row for row in released + newer}
-    expected = ({(harness, model) for harness in HARNESSES for model in RELEASED_MODELS}
-                | {("Shortcut", model) for model in NEWER_MODELS})
+    expected = ({(harness, model) for harness in HARNESSES for model in RELEASED_MODELS + ("Sol 6.1",)}
+                | {("Shortcut", "Opus 5.5")})
     if set(by_key) != expected or len(by_key) != len(released) + len(newer):
-        raise ValueError("Expected the nine released configurations plus two newer Shortcut models")
+        raise ValueError("Expected the nine released configurations plus four later runs")
     if any(row["cases"] != 200 or row["valid"] != 200 or abs(row["street_mae"] - 0.1467) > 1e-12
            for row in by_key.values()):
         raise ValueError("Every score must use 200 usable forecasts and the same Street baseline")
@@ -93,9 +93,9 @@ def render(by_key, groups, name, title):
 
 def main():
     by_key = load()
-    render(by_key, [("Shortcut", RELEASED_MODELS + NEWER_MODELS), ("Codex", RELEASED_MODELS),
-                    ("Codex + GPT Researcher", RELEASED_MODELS)], "all-configurations",
-           "EPS accuracy across eleven agent configurations")
+    render(by_key, [("Shortcut", RELEASED_MODELS + NEWER_MODELS), ("Codex", RELEASED_MODELS + ("Sol 6.1",)),
+                    ("Codex + GPT Researcher", RELEASED_MODELS + ("Sol 6.1",))], "all-configurations",
+           "EPS accuracy across thirteen agent configurations")
     render(by_key, [("Shortcut", RELEASED_MODELS + NEWER_MODELS)], "shortcut-models",
            "EPS accuracy across five models in Shortcut")
 

@@ -3,7 +3,7 @@
   "added_utc": "2026-10-02",
   "cohort_cases": 200,
   "basis": "Same 200 frozen cases, answer key and scoring method as results/scores.json: one usable forecast per case, compared with the same reported EPS and final Street consensus.",
-  "selection": "Failed attempts and attempts flagged for target-results exposure were excluded, and the lowest-numbered usable attempt per case was scored. For one Sol 6.1 case every attempt carried the agent's own exposure flag; review showed the flagged figure was the previous quarter's reported EPS on a third-party calendar page, so the first attempt was kept. See docs/METHODS.md.",
+  "selection": "Failed attempts and attempts flagged for target-results exposure were excluded, and the lowest-numbered usable attempt per case was scored. For one Shortcut Sol 6.1 case every attempt carried the agent's own exposure flag; review showed the flagged figure was the previous quarter's reported EPS on a third-party calendar page, so the first attempt was kept. See docs/METHODS.md. In the Codex and Codex + GPT Researcher Sol 6.1 runs, three failed attempts per run were rerun, mostly provider errors, and no selected forecast carried an exposure flag.",
   "rows": [
     {
       "harness": "Shortcut",
@@ -44,6 +44,52 @@
       "same_absolute_error": 19,
       "farther_than_street": 55,
       "status": "retrospective"
+    },
+    {
+      "harness": "Codex",
+      "model": "Sol 6.1",
+      "model_id": "gpt-6.1-sol",
+      "effort": "high",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.12965,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.01705000000000001,
+      "improvement_95pct_bootstrap": [
+        0.006134999999999997,
+        0.030070000000000003
+      ],
+      "closer_than_street": 106,
+      "same_absolute_error": 23,
+      "farther_than_street": 71,
+      "status": "retrospective",
+      "client": "Codex 0.166.0",
+      "model_access": "personal Codex account",
+      "added_utc": "2026-11-03"
+    },
+    {
+      "harness": "Codex + GPT Researcher",
+      "model": "Sol 6.1",
+      "model_id": "gpt-6.1-sol",
+      "effort": "high",
+      "cases": 200,
+      "valid": 200,
+      "failures": 0,
+      "model_mae": 0.13002,
+      "street_mae": 0.1467,
+      "improvement_over_street": 0.01668,
+      "improvement_95pct_bootstrap": [
+        0.006050000000000001,
+        0.029245
+      ],
+      "closer_than_street": 112,
+      "same_absolute_error": 29,
+      "farther_than_street": 59,
+      "status": "retrospective",
+      "client": "Codex 0.166.0",
+      "model_access": "personal Codex account",
+      "added_utc": "2026-11-03"
     }
   ],
   "paired_vs_shortcut_astra": [
@@ -72,8 +118,34 @@
   ],
   "paired_definition": "first = the newer model, second = Shortcut Astra; mean_error_reduction is Astra absolute error minus the newer model absolute error, per share.",
   "limitations": [
-    "Sol 6.1 and Opus 5.5 ran after the nine Luna, Sol, and Astra configurations, on a later Shortcut runtime build.",
+    "Sol 6.1 and Opus 5.5 in Shortcut ran after the nine Luna, Sol, and Astra configurations, on a later Shortcut runtime build.",
+    "Sol 6.1 in Codex and Codex + GPT Researcher ran on 2026-11-02, a month after the Shortcut run, on Codex 0.166.0 and a personal Codex account. The earlier Codex runs used Codex 0.157.1. See docs/METHODS.md.",
     "Opus 5.5 has the latest knowledge cutoff (June 2026), which covers the forecast quarter itself. Part of its advantage may reflect more recent training rather than better forecasting.",
     "Retrospective cutoffs and post-report consensus. exploratory, not a point-in-time leaderboard."
-  ]
+  ],
+  "paired_sol61_vs_shortcut": [
+    {
+      "other_harness": "Codex",
+      "shortcut_closer": 112,
+      "same": 0,
+      "other_closer": 88,
+      "mean_shortcut_lead": 0.011395990412682078,
+      "ci_95pct_bootstrap": [
+        0.004665733722967388,
+        0.01891551631421702
+      ]
+    },
+    {
+      "other_harness": "Codex + GPT Researcher",
+      "shortcut_closer": 112,
+      "same": 0,
+      "other_closer": 88,
+      "mean_shortcut_lead": 0.011765990412682082,
+      "ci_95pct_bootstrap": [
+        0.004655683694352086,
+        0.019773606658920036
+      ]
+    }
+  ],
+  "paired_sol61_definition": "Same model, Sol 6.1 at high effort. mean_shortcut_lead is the other harness absolute error minus Shortcut absolute error, per share."
 }

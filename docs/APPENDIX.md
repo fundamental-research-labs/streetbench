@@ -1,8 +1,8 @@
 # Appendix
 
-Two supporting tables. The first restates the published scores for all eleven configurations. The second lists the forecasting skill changes we tested. They are separate studies and should not be pooled.
+Two supporting tables. The first restates the published scores for all thirteen configurations. The second lists the forecasting skill changes we tested. They are separate studies and should not be pooled.
 
-## All eleven configurations
+## All thirteen configurations
 
 Each configuration forecast the same 200 companies. The Street's mean error is $0.1467. Cut is the share of that error removed. The last column counts companies closer than the Street, tied, and farther. This table is built from [scores](../results/scores.json), [Sol 6.1 and Opus 5.5 scores](../results/newer-models.json), and [case comparisons](../results/diagnostics.json).
 
@@ -16,6 +16,8 @@ Each configuration forecast the same 200 companies. The Street's mean error is $
 | Codex + GPT Researcher | Astra | $0.1271 | 13.3% | 108-26-66 |
 | Shortcut | Sol | $0.1274 | 13.1% | 120-3-77 |
 | Codex | Astra | $0.1290 | 12.1% | 101-32-67 |
+| Codex | Sol 6.1 | $0.1296 | 11.6% | 106-23-71 |
+| Codex + GPT Researcher | Sol 6.1 | $0.1300 | 11.4% | 112-29-59 |
 | Shortcut | Luna | $0.1316 | 10.3% | 113-9-78 |
 | Codex | Luna | $0.1322 | 9.9% | 100-28-72 |
 | Codex + GPT Researcher | Luna | $0.1413 | 3.7% | 84-31-85 |

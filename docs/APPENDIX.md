@@ -138,6 +138,13 @@ Sol 6.1 in Shortcut on 68 unseen companies, with a pass mark written down before
 
 Provider outages stopped round 1 three times, and one was our own doing. We changed the failure rule each time before any judging score was seen, and kept every attempt on the record. Looking back, averaging both tilts against both runs of the unchanged skill gives +0.80 (-0.31 to 1.94) on 66 companies. That average was not part of the test.
 
+A follow-up then ran the round 2 tilt and the unchanged skill once more on 50 of the 68 companies, chosen by hash, under rules fixed before any of its forecasts ran. It cannot change the loop's verdict. It would have been a lead for a held-back test only if the new runs showed a gain, the tilt had at most two more failed or flagged forecasts, and the pool's lower bound was above zero with a median of at least zero. The pool's lower bound is below zero, so it is not a lead, and we did not detect a gain.
+
+| Follow-up comparison | Pairs | Gain | 95% interval | Median | Wins-ties-losses |
+| --- | --- | --- | --- | --- | --- |
+| New runs only, round 2 tilt against the unchanged skill | 50 | +0.42 | -0.80 to 1.70 | +0.10 | 25-2-23 |
+| All runs pooled, per company, tilts against the unchanged skill | 66 | +0.71 | -0.21 to 1.67 | +0.83 | 38-1-27 |
+
 ## Keeping the answer out of a backtest
 
 Leak judges on 471 test cases, spotting information released after a publication date.

@@ -1,6 +1,6 @@
 # Appendix
 
-Two supporting tables. The first restates the published scores for all thirteen configurations. The second lists the forecasting skill changes we tested. They are separate studies and should not be pooled.
+Supporting tables for the StreetBench results and the [Beat the Street](https://beatthestreet.live/) published record. They are separate studies and should not be pooled.
 
 ## All thirteen configurations
 
@@ -45,3 +45,113 @@ A screen is a cheap first test on a handful of training cases. Validation uses 2
 | Unit consistency | Reconcile units in formulas | Luna | Screen | 3 | 1-1-1 | Rejected |
 | Income signs | One sign convention down to pre-tax income | Luna | Validation | 18 | 7-0-11 | Rejected |
 | Clinical calendar | Separate trial starts, activity and closeouts | Luna | Larger screen | 13 | 6-1-6 | Not promoted, search stopped |
+
+## Do moves away from the Street carry information?
+
+Share of forecasts closer than the Street, by size of the move. Ties are left out. The published record and StreetBench are never pooled, and StreetBench uses the 150 companies outside the held-back 50.
+
+| Dataset | Move from the Street | Closer | Farther | Share |
+| --- | --- | --- | --- | --- |
+| StreetBench, Opus 5.5 | Under 2% | 14 | 14 | 50% |
+| StreetBench, Opus 5.5 | 2–5% | 32 | 13 | 71% |
+| StreetBench, Opus 5.5 | 5–10% | 18 | 4 | 82% |
+| StreetBench, Opus 5.5 | 10–20% | 11 | 4 | 73% |
+| StreetBench, Opus 5.5 | Over 20% | 22 | 3 | 88% |
+| StreetBench, Sol 6.1 | Under 2% | 22 | 20 | 52% |
+| StreetBench, Sol 6.1 | 2–5% | 29 | 17 | 63% |
+| StreetBench, Sol 6.1 | 5–10% | 15 | 8 | 65% |
+| StreetBench, Sol 6.1 | 10–20% | 9 | 6 | 60% |
+| StreetBench, Sol 6.1 | Over 20% | 20 | 4 | 83% |
+| Published record | Under 0.5% | 8 | 7 | 53% |
+| Published record | 0.5–1% | 26 | 9 | 74% |
+| Published record | 1–2% | 29 | 6 | 83% |
+| Published record | 2–5% | 33 | 12 | 73% |
+| Published record | Over 5% | 23 | 4 | 85% |
+
+How often the company then fell short of the Street, after a move up or down.
+
+| Dataset | After a move up | After a move down | Rank correlation, move and surprise | Fisher exact, one-sided |
+| --- | --- | --- | --- | --- |
+| Published record | 10 of 120 (8%) | 11 of 37 (30%) | 0.479 (0.33 to 0.62) | p = 0.002 |
+| StreetBench, Opus 5.5 | 14 of 83 (17%) | 36 of 53 (68%) | 0.658 (0.52 to 0.76) | p < 0.0001 |
+| StreetBench, Sol 6.1 | 19 of 89 (21%) | 35 of 61 (57%) | 0.506 (0.34 to 0.65) | p < 0.0001 |
+
+## Gain by the Street's past error
+
+Share of the Street's capped % error removed on StreetBench, by thirds of a company's median Street miss in earlier quarters. The split was chosen after seeing results.
+
+| Harness | Model | Street had been accurate | Middle | Street had missed most |
+| --- | --- | --- | --- | --- |
+| Codex | Astra | 1.3% | 13.8% | 11.9% |
+| Codex | Luna | 0.7% | 3.5% | 12.7% |
+| Codex | Sol | 4.7% | 14.6% | 15.6% |
+| Codex | Sol 6.1 | 4.3% | 10.8% | 15.1% |
+| Codex + GPT Researcher | Astra | 6.0% | 12.3% | 13.8% |
+| Codex + GPT Researcher | Luna | -25.6% | 4.0% | 5.6% |
+| Codex + GPT Researcher | Sol | -9.4% | 23.1% | 11.6% |
+| Codex + GPT Researcher | Sol 6.1 | 2.6% | 13.0% | 12.9% |
+| Shortcut | Astra | -1.5% | 21.6% | 20.6% |
+| Shortcut | Luna | 3.6% | 7.9% | 8.3% |
+| Shortcut | Opus 5.5 | 0.2% | 24.4% | 28.0% |
+| Shortcut | Sol | -4.0% | 15.9% | 20.5% |
+| Shortcut | Sol 6.1 | 1.7% | 17.2% | 25.4% |
+
+## Main reason for each published move
+
+A model coded each published forecast's stated rationale and closing answer with outcomes hidden, recording the main reason for the gap to the Street. Many forecasts cite several reasons, and small groups have wide intervals.
+
+| Main reason | Forecasts | Closer than the Street | Median move | Moved down |
+| --- | --- | --- | --- | --- |
+| Recent company disclosure | 42 | 28 (67%) | 1.23% | 11 |
+| Operating build from segments, units or backlog | 35 | 26 (74%) | 1.05% | 9 |
+| Record of beating guidance or consensus | 28 | 26 (93%) | 2.38% | 0 |
+| Interest, tax, share count or FX | 19 | 14 (74%) | 2.07% | 9 |
+| No stated rationale | 13 | 9 (69%) | 2.12% | 4 |
+| Costs or margin | 9 | 7 (78%) | 3.94% | 1 |
+| Stale, dispersed or mismatched consensus | 6 | 5 (83%) | 12.47% | 1 |
+| Peer or third-party data | 5 | 4 (80%) | 4.83% | 2 |
+
+## Simple-rule checks
+
+Nudges are 0.5%, picked with hindsight. StreetBench is Opus 5.5 on 150 companies.
+
+| Check | Published record | StreetBench |
+| --- | --- | --- |
+| Actual above the Street | 136 of 157 | 84 of 150 |
+| Forecast closer than the Street | 119 | 97 |
+| Flat nudge closer | 136 | 84 |
+| Nudge by profitability closer | 132 | 105 |
+| Forecast pointed the right way | 121 | 103 |
+| Always saying above | 136 | 84 |
+
+## The improvement loop
+
+Sol 6.1 in Shortcut on 68 unseen companies, with a pass mark written down before any forecast was scored. To pass, the 95% interval had to stay above zero and the median had to be at least zero. Gains are in capped % error points. Neither round passed, and the rule ended the loop after two failures in a row.
+
+| Comparison | Pairs | Gain | 95% interval | Median | Wins-ties-losses |
+| --- | --- | --- | --- | --- | --- |
+| Round 1 tilt against the unchanged skill | 66 | +1.31 | -0.66 to 3.60 | +0.29 | 37-2-27 |
+| Round 2 tilt, profitable companies only | 66 | +1.30 | -0.67 to 3.58 | 0.00 | 32-3-31 |
+| Rerun of the unchanged skill against the original forecasts | 66 | -1.02 | -3.71 to 1.42 | +0.47 | 37-2-27 |
+| Round 1 tilt against the original forecasts | 67 | +0.30 | -1.81 to 2.25 | +0.83 | 43-1-23 |
+| Round 2 tilt against the original forecasts | 68 | +0.28 | -1.76 to 1.92 | +0.70 | 44-2-22 |
+
+Provider outages stopped round 1 three times, and one was our own doing. We changed the failure rule each time before any judging score was seen, and kept every attempt on the record. Looking back, averaging both tilts against both runs of the unchanged skill gives +0.80 (-0.31 to 1.94) on 66 companies. That average was not part of the test.
+
+## Keeping the answer out of a backtest
+
+Leak judges on 471 test cases, spotting information released after a publication date.
+
+| Judge | False negatives | False positives | Overall accuracy |
+| --- | --- | --- | --- |
+| TypeSafe Jev | 18 | 11 | 93.8% (442 of 471) |
+| Claude Haiku | 78 | 9 | 81.5% (384 of 471) |
+
+Four ways of bounding web evidence. The Wayback row comes from an earlier 113-company Q2 backtest, not StreetBench.
+
+| Setup | What it did | What we found |
+| --- | --- | --- |
+| Open web | No date control | All 27 test runs saw the actual results |
+| Date filter | Search only pages first published before the cutoff | Pages updated in place carry later text. 4 of 19 Wikipedia pages failed one check |
+| Wayback + Jev | A Wayback capture from before the cutoff, with a leak judge as the fallback | About 3,540 pages blocked and 13,000 served. 18 of 113 runs said a search result showed them reported numbers, though a URL audit found no results page |
+| Exa Snapshot | Every search and page read pinned to the case cutoff, with no live fallback | All 14,420 page records carried the cutoff. Of the 5,209 with a publication date, none was after it |
